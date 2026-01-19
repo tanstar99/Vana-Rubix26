@@ -1,0 +1,466 @@
+[
+  {
+    "id": "tulsi",
+    "scientificName": "Ocimum sanctum",
+    "commonName": "Holy Basil (Tulsi)",
+    "localNames": ["Tulsi", "Tulasi", "Vrinda"],
+    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "descriptionShort": "Sacred herb known for its powerful immune-boosting and adaptogenic properties.",
+    "descriptionFull": "Tulsi, or Holy Basil, is revered in Ayurveda as the 'Queen of Herbs'. It has been used for thousands of years in Indian medicine for its remarkable healing properties. The plant contains powerful antioxidants and adaptogenic compounds that help the body cope with stress, enhance immunity, and promote overall wellness.",
+    "tags": ["immunity", "stress", "respiratory", "adaptogen"],
+    "diseaseCategories": ["cold", "fever", "cough", "stress", "anxiety"],
+    "partsUsed": ["leaf", "seed", "root"],
+    "medicinalProperties": ["anti-inflammatory", "antioxidant", "adaptogenic", "antimicrobial", "immunomodulatory"],
+    "therapeuticUses": [
+      {
+        "condition": "Common Cold",
+        "benefit": "Helps relieve cold symptoms and boosts immune response"
+      },
+      {
+        "condition": "Stress & Anxiety",
+        "benefit": "Reduces cortisol levels and promotes mental clarity"
+      },
+      {
+        "condition": "Respiratory Issues",
+        "benefit": "Eases breathing and reduces congestion"
+      }
+    ],
+    "dosage": {
+      "form": "Fresh leaves or tea",
+      "amount": "5-10 leaves or 1-2 cups of tea",
+      "frequency": "Daily, preferably in the morning"
+    },
+    "precautions": [
+      "May lower blood sugar levels - diabetics should monitor",
+      "Avoid during pregnancy",
+      "May affect fertility in high doses"
+    ],
+    "cultivation": {
+      "soil": "Well-drained, fertile soil with pH 6-7.5",
+      "water": "Regular watering, avoid waterlogging",
+      "climate": "Tropical and subtropical, warm temperatures"
+    },
+    "habitat": {
+      "region": "India, Southeast Asia",
+      "origin": "Indian subcontinent"
+    },
+    "media": {
+      "images": ["/images/tulsi-1.jpg", "/images/tulsi-2.jpg"],
+      "videos": ["/videos/tulsi-benefits.mp4"],
+      "audio": ["/audio/tulsi-info.mp3"],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "center",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "id": "ashwagandha",
+    "scientificName": "Withania somnifera",
+    "commonName": "Ashwagandha (Indian Ginseng)",
+    "localNames": ["Ashwagandha", "Asgandh", "Indian Ginseng"],
+    "ayushSystems": ["Ayurveda", "Unani"],
+    "descriptionShort": "Powerful adaptogenic herb that enhances vitality, reduces stress, and improves overall health.",
+    "descriptionFull": "Ashwagandha is one of the most important herbs in Ayurveda and has been used for over 3,000 years. Known as an adaptogen, it helps the body manage stress. It also provides numerous other benefits for body and brain, including boosting brain function, lowering blood sugar and cortisol levels, and helping fight symptoms of anxiety and depression.",
+    "tags": ["stress", "adaptogen", "energy", "vitality"],
+    "diseaseCategories": ["stress", "anxiety", "fatigue", "insomnia"],
+    "partsUsed": ["root", "leaf"],
+    "medicinalProperties": ["adaptogenic", "anti-inflammatory", "antioxidant", "immunomodulatory", "neuroprotective"],
+    "therapeuticUses": [
+      {
+        "condition": "Chronic Stress",
+        "benefit": "Reduces cortisol and helps body adapt to stress"
+      },
+      {
+        "condition": "Anxiety & Depression",
+        "benefit": "Improves mood and reduces anxiety symptoms"
+      },
+      {
+        "condition": "Fatigue",
+        "benefit": "Boosts energy and stamina"
+      }
+    ],
+    "dosage": {
+      "form": "Powder or capsules",
+      "amount": "300-500mg",
+      "frequency": "Twice daily with meals"
+    },
+    "precautions": [
+      "May interact with thyroid medications",
+      "Avoid during pregnancy and breastfeeding",
+      "May cause drowsiness in some individuals"
+    ],
+    "cultivation": {
+      "soil": "Well-drained sandy loam with pH 7.5-8",
+      "water": "Moderate, drought-tolerant once established",
+      "climate": "Dry regions, tolerates high temperatures"
+    },
+    "habitat": {
+      "region": "India, Middle East, Africa",
+      "origin": "India"
+    },
+    "media": {
+      "images": ["/images/ashwagandha-1.jpg", "/images/ashwagandha-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "left",
+      "x": -3,
+      "y": 0,
+      "z": 2
+    }
+  },
+  {
+    "id": "neem",
+    "scientificName": "Azadirachta indica",
+    "commonName": "Neem",
+    "localNames": ["Neem", "Nimba", "Margosa"],
+    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "descriptionShort": "Nature's pharmacy with powerful antibacterial, antifungal, and purifying properties.",
+    "descriptionFull": "Neem is often called the 'village pharmacy' in India due to its wide range of medicinal properties. Every part of the neem tree has been used in traditional medicine for thousands of years. It's particularly valued for its ability to purify blood, support skin health, and boost immunity.",
+    "tags": ["skin", "immunity", "detox", "antibacterial"],
+    "diseaseCategories": ["skin conditions", "diabetes", "infections", "dental problems"],
+    "partsUsed": ["leaf", "bark", "seed", "oil"],
+    "medicinalProperties": ["antibacterial", "antifungal", "antiviral", "anti-inflammatory", "blood purifier"],
+    "therapeuticUses": [
+      {
+        "condition": "Skin Conditions",
+        "benefit": "Treats acne, eczema, and other skin issues"
+      },
+      {
+        "condition": "Diabetes",
+        "benefit": "Helps regulate blood sugar levels"
+      },
+      {
+        "condition": "Dental Health",
+        "benefit": "Prevents gum disease and tooth decay"
+      }
+    ],
+    "dosage": {
+      "form": "Leaves, powder, or oil",
+      "amount": "2-4 leaves or 500mg powder",
+      "frequency": "Daily, preferably on empty stomach"
+    },
+    "precautions": [
+      "Excessive use may harm liver and kidneys",
+      "Not recommended during pregnancy",
+      "May lower fertility temporarily"
+    ],
+    "cultivation": {
+      "soil": "Well-drained soil, tolerates poor soil",
+      "water": "Low to moderate, drought-resistant",
+      "climate": "Tropical and subtropical, hot climates"
+    },
+    "habitat": {
+      "region": "Indian subcontinent",
+      "origin": "India and Burma"
+    },
+    "media": {
+      "images": ["/images/neem-1.jpg", "/images/neem-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "right",
+      "x": 3,
+      "y": 0,
+      "z": 2
+    }
+  },
+  {
+    "id": "turmeric",
+    "scientificName": "Curcuma longa",
+    "commonName": "Turmeric (Haldi)",
+    "localNames": ["Haldi", "Manjal", "Pasupu"],
+    "ayushSystems": ["Ayurveda", "Siddha", "Unani"],
+    "descriptionShort": "Golden spice with powerful anti-inflammatory and antioxidant properties.",
+    "descriptionFull": "Turmeric has been used in India for thousands of years as both a spice and medicinal herb. Curcumin, the main active ingredient in turmeric, has powerful anti-inflammatory effects and is a very strong antioxidant. It's used to treat a wide variety of conditions including inflammation, digestive issues, and skin problems.",
+    "tags": ["inflammation", "antioxidant", "digestion", "immunity"],
+    "diseaseCategories": ["inflammation", "arthritis", "digestion", "skin conditions"],
+    "partsUsed": ["rhizome", "root"],
+    "medicinalProperties": ["anti-inflammatory", "antioxidant", "antimicrobial", "hepatoprotective", "wound healing"],
+    "therapeuticUses": [
+      {
+        "condition": "Arthritis",
+        "benefit": "Reduces inflammation and pain in joints"
+      },
+      {
+        "condition": "Digestive Issues",
+        "benefit": "Improves digestion and reduces bloating"
+      },
+      {
+        "condition": "Skin Health",
+        "benefit": "Promotes healing and reduces blemishes"
+      }
+    ],
+    "dosage": {
+      "form": "Fresh root, powder, or capsules",
+      "amount": "500-1000mg with black pepper",
+      "frequency": "Daily with meals"
+    },
+    "precautions": [
+      "May interfere with blood thinners",
+      "High doses may cause stomach upset",
+      "May worsen gallbladder problems"
+    ],
+    "cultivation": {
+      "soil": "Rich, well-drained loamy soil with pH 4.5-7.5",
+      "water": "Regular watering, needs good moisture",
+      "climate": "Tropical, warm and humid conditions"
+    },
+    "habitat": {
+      "region": "South Asia",
+      "origin": "India"
+    },
+    "media": {
+      "images": ["/images/turmeric-1.jpg", "/images/turmeric-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "center-left",
+      "x": -2,
+      "y": 0,
+      "z": -1
+    }
+  },
+  {
+    "id": "brahmi",
+    "scientificName": "Bacopa monnieri",
+    "commonName": "Brahmi",
+    "localNames": ["Brahmi", "Water Hyssop", "Thyme-leaved Gratiola"],
+    "ayushSystems": ["Ayurveda", "Siddha"],
+    "descriptionShort": "Brain tonic herb that enhances memory, learning, and cognitive function.",
+    "descriptionFull": "Brahmi is a renowned brain tonic in Ayurvedic medicine. It has been used for centuries to improve memory, reduce anxiety, and treat epilepsy. Modern research supports its cognitive-enhancing properties and its ability to improve information processing, learning rate, and memory consolidation.",
+    "tags": ["brain", "memory", "cognitive", "learning"],
+    "diseaseCategories": ["memory loss", "anxiety", "ADHD", "cognitive decline"],
+    "partsUsed": ["whole plant", "leaf"],
+    "medicinalProperties": ["nootropic", "adaptogenic", "neuroprotective", "anxiolytic", "antioxidant"],
+    "therapeuticUses": [
+      {
+        "condition": "Memory Enhancement",
+        "benefit": "Improves memory formation and recall"
+      },
+      {
+        "condition": "Anxiety",
+        "benefit": "Reduces anxiety without causing drowsiness"
+      },
+      {
+        "condition": "ADHD",
+        "benefit": "Improves attention and reduces hyperactivity"
+      }
+    ],
+    "dosage": {
+      "form": "Powder, capsules, or fresh juice",
+      "amount": "300-450mg extract",
+      "frequency": "Daily with meals"
+    },
+    "precautions": [
+      "May cause digestive upset in some people",
+      "May interact with thyroid medications",
+      "Use cautiously with sedatives"
+    ],
+    "cultivation": {
+      "soil": "Wet, marshy soil or hydroponic",
+      "water": "Requires constant moisture or water",
+      "climate": "Tropical and subtropical wetlands"
+    },
+    "habitat": {
+      "region": "India, wetlands of Asia",
+      "origin": "Indian wetlands"
+    },
+    "media": {
+      "images": ["/images/brahmi-1.jpg", "/images/brahmi-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "water-zone",
+      "x": 2,
+      "y": 0,
+      "z": -2
+    }
+  },
+  {
+    "id": "amla",
+    "scientificName": "Phyllanthus emblica",
+    "commonName": "Indian Gooseberry (Amla)",
+    "localNames": ["Amla", "Amalaki", "Nellikai"],
+    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "descriptionShort": "Superfruit rich in Vitamin C with powerful rejuvenating and immunity-boosting properties.",
+    "descriptionFull": "Amla is considered one of the most rejuvenating herbs in Ayurveda. It's exceptionally rich in Vitamin C and antioxidants. The fruit is used to enhance immunity, improve digestion, promote hair growth, and support overall vitality. It's a key ingredient in many Ayurvedic formulations including the famous Chyawanprash.",
+    "tags": ["immunity", "antioxidant", "digestion", "rejuvenation"],
+    "diseaseCategories": ["weak immunity", "diabetes", "hair loss", "eye problems"],
+    "partsUsed": ["fruit", "seed", "leaf"],
+    "medicinalProperties": ["antioxidant", "immunomodulatory", "hepatoprotective", "cardioprotective", "anti-aging"],
+    "therapeuticUses": [
+      {
+        "condition": "Immunity",
+        "benefit": "Strengthens immune system and prevents infections"
+      },
+      {
+        "condition": "Diabetes",
+        "benefit": "Helps regulate blood sugar levels"
+      },
+      {
+        "condition": "Hair Health",
+        "benefit": "Promotes hair growth and prevents premature graying"
+      }
+    ],
+    "dosage": {
+      "form": "Fresh fruit, juice, or powder",
+      "amount": "1-2 fresh fruits or 1-3g powder",
+      "frequency": "Daily, preferably in the morning"
+    },
+    "precautions": [
+      "Excessive consumption may cause diarrhea",
+      "May lower blood sugar - monitor if diabetic",
+      "Store away from moisture to prevent spoilage"
+    ],
+    "cultivation": {
+      "soil": "Well-drained loamy or sandy soil",
+      "water": "Regular watering, drought-tolerant when mature",
+      "climate": "Tropical and subtropical, tolerates heat"
+    },
+    "habitat": {
+      "region": "India, Southeast Asia",
+      "origin": "Indian subcontinent"
+    },
+    "media": {
+      "images": ["/images/amla-1.jpg", "/images/amla-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "back",
+      "x": 0,
+      "y": 0,
+      "z": -3
+    }
+  },
+  {
+    "id": "ginger",
+    "scientificName": "Zingiber officinale",
+    "commonName": "Ginger (Adrak)",
+    "localNames": ["Adrak", "Inji", "Allam"],
+    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "descriptionShort": "Warming spice excellent for digestion, nausea, and inflammation.",
+    "descriptionFull": "Ginger is a flowering plant whose rhizome is widely used as a spice and in traditional medicine. It has been used for thousands of years for its digestive properties and ability to reduce nausea. Ginger contains gingerol, a compound with powerful anti-inflammatory and antioxidant effects.",
+    "tags": ["digestion", "nausea", "inflammation", "immunity"],
+    "diseaseCategories": ["nausea", "indigestion", "arthritis", "cold"],
+    "partsUsed": ["rhizome", "root"],
+    "medicinalProperties": ["anti-inflammatory", "antiemetic", "digestive", "antimicrobial", "circulatory stimulant"],
+    "therapeuticUses": [
+      {
+        "condition": "Nausea",
+        "benefit": "Relieves nausea and vomiting"
+      },
+      {
+        "condition": "Indigestion",
+        "benefit": "Improves digestion and reduces bloating"
+      },
+      {
+        "condition": "Arthritis",
+        "benefit": "Reduces pain and inflammation"
+      }
+    ],
+    "dosage": {
+      "form": "Fresh root, tea, or powder",
+      "amount": "1-2g fresh or 250-500mg powder",
+      "frequency": "2-3 times daily with meals"
+    },
+    "precautions": [
+      "May interact with blood thinners",
+      "Avoid high doses if on blood pressure medication",
+      "May cause heartburn in sensitive individuals"
+    ],
+    "cultivation": {
+      "soil": "Rich, well-drained loamy soil",
+      "water": "Regular watering, keep soil moist",
+      "climate": "Tropical and subtropical, warm humid conditions"
+    },
+    "habitat": {
+      "region": "Southeast Asia",
+      "origin": "Southeast Asian tropical rainforests"
+    },
+    "media": {
+      "images": ["/images/ginger-1.jpg", "/images/ginger-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "center-right",
+      "x": 2,
+      "y": 0,
+      "z": 1
+    }
+  },
+  {
+    "id": "aloe-vera",
+    "scientificName": "Aloe barbadensis miller",
+    "commonName": "Aloe Vera",
+    "localNames": ["Ghritkumari", "Katralai", "Musabbar"],
+    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "descriptionShort": "Succulent plant with soothing gel used for skin health and digestive support.",
+    "descriptionFull": "Aloe Vera has been used medicinally for thousands of years. The gel inside its leaves contains vitamins, minerals, and antioxidants. It's widely used for skin conditions, burns, and wound healing. Internally, it supports digestive health and helps detoxify the body.",
+    "tags": ["skin", "digestion", "healing", "detox"],
+    "diseaseCategories": ["skin conditions", "burns", "constipation", "diabetes"],
+    "partsUsed": ["gel", "leaf"],
+    "medicinalProperties": ["wound healing", "anti-inflammatory", "moisturizing", "laxative", "antioxidant"],
+    "therapeuticUses": [
+      {
+        "condition": "Burns & Wounds",
+        "benefit": "Accelerates healing and soothes skin"
+      },
+      {
+        "condition": "Skin Conditions",
+        "benefit": "Treats acne, eczema, and dry skin"
+      },
+      {
+        "condition": "Constipation",
+        "benefit": "Acts as a natural laxative"
+      }
+    ],
+    "dosage": {
+      "form": "Fresh gel or juice",
+      "amount": "2-4 tbsp gel or 50-200ml juice",
+      "frequency": "Daily, preferably in the morning"
+    },
+    "precautions": [
+      "Internal use may cause cramping or diarrhea",
+      "Not recommended during pregnancy or breastfeeding",
+      "May lower blood sugar levels"
+    ],
+    "cultivation": {
+      "soil": "Well-drained sandy or gravelly soil",
+      "water": "Low, drought-tolerant, water sparingly",
+      "climate": "Tropical and subtropical, warm dry conditions"
+    },
+    "habitat": {
+      "region": "Arabian Peninsula, now worldwide",
+      "origin": "Arabian Peninsula"
+    },
+    "media": {
+      "images": ["/images/aloe-1.jpg", "/images/aloe-2.jpg"],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "left-front",
+      "x": -2,
+      "y": 0,
+      "z": 3
+    }
+  }
+]

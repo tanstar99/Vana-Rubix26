@@ -1,0 +1,108 @@
+[
+  {
+    "id": "immunity-tour",
+    "title": "Immunity Boosters Tour",
+    "theme": "immunity",
+    "description": "Discover powerful herbs that strengthen your immune system and protect against infections.",
+    "coverImage": "/images/tour-immunity.jpg",
+    "steps": [
+      {
+        "plantId": "tulsi",
+        "narrationText": "Begin your immunity journey with Tulsi, the Queen of Herbs. This sacred plant has been protecting Indian households for millennia with its powerful immunomodulatory properties.",
+        "order": 1
+      },
+      {
+        "plantId": "amla",
+        "narrationText": "Next, we visit Amla, nature's richest source of Vitamin C. One small fruit contains more vitamin C than an orange, making it a powerhouse for immunity.",
+        "order": 2
+      },
+      {
+        "plantId": "neem",
+        "narrationText": "Meet Neem, the village pharmacy. Its powerful antibacterial and antiviral properties make it essential for maintaining a strong immune defense.",
+        "order": 3
+      },
+      {
+        "plantId": "ginger",
+        "narrationText": "Complete your tour with Ginger, a warming root that boosts circulation and enhances your body's natural defenses.",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "id": "digestion-tour",
+    "title": "Digestive Health Tour",
+    "theme": "digestion",
+    "description": "Explore herbs that support healthy digestion, reduce bloating, and improve gut health.",
+    "coverImage": "/images/tour-digestion.jpg",
+    "steps": [
+      {
+        "plantId": "ginger",
+        "narrationText": "Start with Ginger, the ultimate digestive aid. Its warming properties stimulate digestive fire and reduce nausea and bloating.",
+        "order": 1
+      },
+      {
+        "plantId": "turmeric",
+        "narrationText": "Discover Turmeric, the golden healer. It soothes inflammation in the gut and supports healthy digestion.",
+        "order": 2
+      },
+      {
+        "plantId": "aloe-vera",
+        "narrationText": "Visit Aloe Vera, nature's gentle laxative. Its cooling gel soothes the digestive tract and promotes regularity.",
+        "order": 3
+      },
+      {
+        "plantId": "amla",
+        "narrationText": "Conclude with Amla, which enhances digestive enzyme activity and supports overall gut health.",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "id": "stress-relief-tour",
+    "title": "Stress Relief & Mental Clarity Tour",
+    "theme": "stress",
+    "description": "Journey through adaptogenic herbs that calm the mind, reduce stress, and enhance mental clarity.",
+    "coverImage": "/images/tour-stress.jpg",
+    "steps": [
+      {
+        "plantId": "ashwagandha",
+        "narrationText": "Begin with Ashwagandha, the king of adaptogens. This powerful root helps your body adapt to stress and promotes a sense of calm.",
+        "order": 1
+      },
+      {
+        "plantId": "brahmi",
+        "narrationText": "Move to Brahmi, the brain tonic. This herb calms anxiety while simultaneously sharpening focus and memory.",
+        "order": 2
+      },
+      {
+        "plantId": "tulsi",
+        "narrationText": "Experience Tulsi's stress-relieving properties. Regular consumption helps reduce cortisol levels and brings mental clarity.",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "id": "skin-health-tour",
+    "title": "Radiant Skin Tour",
+    "theme": "skin",
+    "description": "Learn about herbs that promote glowing skin, heal wounds, and treat skin conditions naturally.",
+    "coverImage": "/images/tour-skin.jpg",
+    "steps": [
+      {
+        "plantId": "neem",
+        "narrationText": "Start with Neem, nature's purifier. Its antibacterial properties make it perfect for treating acne and skin infections.",
+        "order": 1
+      },
+      {
+        "plantId": "turmeric",
+        "narrationText": "Discover Turmeric's beauty secrets. This golden spice has been used for centuries to brighten skin and reduce inflammation.",
+        "order": 2
+      },
+      {
+        "plantId": "aloe-vera",
+        "narrationText": "Meet Aloe Vera, the skin soother. Its cooling gel hydrates, heals wounds, and rejuvenates skin naturally.",
+        "order": 3
+      }
+    ]
+  }
+]
