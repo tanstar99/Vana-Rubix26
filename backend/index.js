@@ -9,6 +9,9 @@ import authRoutes from "./routes/authRoutes.js";
 import bookmarkRoutes from "./routes/bookMarkRoutes.js";
 import noteRoutes from "./routes/noteRoutes.js";
 import exportRoutes from "./routes/exportRoutes.js";
+import tourRoutes from "./routes/tourRoutes.js";
+import recommendationRoutes from "./routes/recommendations.js";
+
 
 
 dotenv.config({ path: "./.env" });
@@ -26,6 +29,10 @@ app.use("/api/users", authRoutes);
 app.use("/api/bookmarks", bookmarkRoutes);
 app.use("/api/notes", noteRoutes);
 app.use("/api/export", exportRoutes);
+app.use("/api/tours", tourRoutes);
+app.use("/api/recommendations", recommendationRoutes);
+
+
 
 
 // Connect DB

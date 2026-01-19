@@ -23,9 +23,31 @@ const plantSchema = new mongoose.Schema(
     precautions: String,
     habitat: String,
     region: String,
-    images: [String],
-    videos: [String],
+
+    // 🌱 Multimedia Learning Content
+    images: [String], // Cloudinary image URLs
+    videos: [String], // Cloudinary / YouTube URLs
+    audios: [String], // Cloudinary audio URLs
+
+    description: {
+      type: String, // text explanation
+    },
+
     conservationStatus: String,
+    themes: [
+      {
+        type: String,
+        enum: [
+          "immunity",
+          "digestion",
+          "stress",
+          "diabetes",
+          "skin",
+          "respiratory",
+          "mental-health",
+        ],
+      },
+    ],
   },
   { timestamps: true },
 );
