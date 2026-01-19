@@ -2,30 +2,30 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import TourCard from '../components/TourCard';
 import TourPlayer from '../components/TourPlayer';
-import { Tour, Plant } from '../types';
+import { Tour } from '../types';
+import { usePlants } from '../hooks/usePlants';
 
 export default function ToursPage() {
   const { tourId } = useParams<{ tourId?: string }>();
   const navigate = useNavigate();
   const [tours, setTours] = useState<Tour[]>([]);
-  const [plants, setPlants] = useState<Plant[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [toursLoading, setToursLoading] = useState(true);
+  const { plants, loading: plantsLoading } = usePlants();
 
   useEffect(() => {
-    Promise.all([
-      fetch('/tours.json').then((res) => res.json()),
-      fetch('/plants.json').then((res) => res.json()),
-    ])
-      .then(([toursData, plantsData]) => {
-        setTours(toursData);
-        setPlants(plantsData);
-        setLoading(false);
+    fetch('/tours.json')
+      .then((res) => res.json())
+      .then((data) => {
+        setTours(data);
+        setToursLoading(false);
       })
       .catch((err) => {
-        console.error('Error loading data:', err);
-        setLoading(false);
+        console.error('Error loading tours:', err);
+        setToursLoading(false);
       });
   }, []);
+
+  const loading = toursLoading || plantsLoading;
 
   const selectedTour = tourId ? tours.find((t) => t.id === tourId) : null;
 

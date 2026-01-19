@@ -1,44 +1,34 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Plant } from '../types';
 import BookmarkButton from '../components/BookmarkButton';
 import NoteEditor from '../components/NoteEditor';
 import PlantViewer from '../three/PlantViewer';
+import { usePlant } from '../hooks/usePlants';
 
 export default function PlantDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const [plant, setPlant] = useState<Plant | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { plant, loading, error } = usePlant(id);
   const [activeTab, setActiveTab] = useState<'info' | '3d' | 'media'>('info');
-
-  useEffect(() => {
-    fetch('/plants.json')
-      .then((res) => res.json())
-      .then((data: Plant[]) => {
-        const foundPlant = data.find((p) => p.id === id);
-        setPlant(foundPlant || null);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error loading plant:', err);
-        setLoading(false);
-      });
-  }, [id]);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 flex items-center justify-center">
-        <div className="text-white text-2xl">Loading...</div>
+        <div className="text-center">
+          <div className="text-6xl mb-4 animate-pulse" style={{ filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.8))' }}>🌿</div>
+          <div className="text-2xl bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent font-semibold">Loading plant...</div>
+        </div>
       </div>
     );
   }
 
-  if (!plant) {
+  if (error || !plant) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 flex items-center justify-center">
         <div className="text-center">
+          <div className="text-6xl mb-4">🔍</div>
           <h1 className="text-3xl font-bold text-white mb-4">Plant not found</h1>
-          <Link to="/plants" className="text-emerald-400 hover:text-emerald-300">
+          {error && <p className="text-red-300 mb-4">{error.message}</p>}
+          <Link to="/plants" className="text-emerald-400 hover:text-emerald-300 inline-block mt-4">
             ← Back to Plants
           </Link>
         </div>

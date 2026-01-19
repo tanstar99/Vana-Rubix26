@@ -3,64 +3,72 @@ import PlantCard from '../components/PlantCard';
 import SearchBar from '../components/SearchBar';
 import FilterPanel from '../components/FilterPanel';
 import { Plant } from '../types';
-import { filterPlants } from '../utils/filterPlants';
+import { usePlants, usePlantSearch } from '../hooks/usePlants';
 
 export default function PlantsPage() {
-  const [plants, setPlants] = useState<Plant[]>([]);
-  const [loading, setLoading] = useState(true);
-  
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedAyushSystems, setSelectedAyushSystems] = useState<string[]>([]);
   const [selectedDiseaseCategories, setSelectedDiseaseCategories] = useState<string[]>([]);
   const [selectedPartsUsed, setSelectedPartsUsed] = useState<string[]>([]);
 
-  useEffect(() => {
-    fetch('/plants.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setPlants(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error loading plants:', err);
-        setLoading(false);
-      });
-  }, []);
+  // Fetch all plants initially for filter options
+  const { plants: allPlants, loading: loadingAll } = usePlants();
+  
+  // Use search when filters are applied
+  const { plants: searchedPlants, loading: searching, search } = usePlantSearch();
+  const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
-  // Get unique values for filters
+  // Determine which plants to show and loading state
+  const plants = hasActiveFilters ? searchedPlants : allPlants;
+  const loading = hasActiveFilters ? searching : loadingAll;
+
+  // Apply search when filters change
+  useEffect(() => {
+    const hasFilters = 
+      searchQuery.trim() !== '' ||
+      selectedAyushSystems.length > 0 ||
+      selectedDiseaseCategories.length > 0 ||
+      selectedPartsUsed.length > 0;
+
+    setHasActiveFilters(hasFilters);
+
+    if (hasFilters) {
+      const searchParams: any = {};
+      if (searchQuery.trim()) searchParams.q = searchQuery.trim();
+      if (selectedAyushSystems.length > 0) searchParams.ayushSystems = selectedAyushSystems;
+      if (selectedDiseaseCategories.length > 0) searchParams.diseaseCategories = selectedDiseaseCategories;
+      if (selectedPartsUsed.length > 0) searchParams.partsUsed = selectedPartsUsed;
+      
+      search(searchParams);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchQuery, selectedAyushSystems, selectedDiseaseCategories, selectedPartsUsed]);
+
+  // Get unique values for filters from all plants
   const ayushSystems = useMemo(() => {
     const systems = new Set<string>();
-    plants.forEach((plant) => plant.ayushSystems.forEach((s) => systems.add(s)));
+    allPlants.forEach((plant) => plant.ayushSystems.forEach((s) => systems.add(s)));
     return Array.from(systems).sort();
-  }, [plants]);
+  }, [allPlants]);
 
   const diseaseCategories = useMemo(() => {
     const categories = new Set<string>();
-    plants.forEach((plant) => plant.diseaseCategories.forEach((c) => categories.add(c)));
+    allPlants.forEach((plant) => plant.diseaseCategories.forEach((c) => categories.add(c)));
     return Array.from(categories).sort();
-  }, [plants]);
+  }, [allPlants]);
 
   const partsUsed = useMemo(() => {
     const parts = new Set<string>();
-    plants.forEach((plant) => plant.partsUsed.forEach((p) => parts.add(p)));
+    allPlants.forEach((plant) => plant.partsUsed.forEach((p) => parts.add(p)));
     return Array.from(parts).sort();
-  }, [plants]);
-
-  // Filter plants
-  const filteredPlants = useMemo(() => {
-    return filterPlants(plants, {
-      searchQuery,
-      ayushSystems: selectedAyushSystems,
-      diseaseCategories: selectedDiseaseCategories,
-      partsUsed: selectedPartsUsed,
-    });
-  }, [plants, searchQuery, selectedAyushSystems, selectedDiseaseCategories, selectedPartsUsed]);
+  }, [allPlants]);
 
   const handleClearFilters = () => {
     setSearchQuery('');
     setSelectedAyushSystems([]);
     setSelectedDiseaseCategories([]);
     setSelectedPartsUsed([]);
+    setHasActiveFilters(false);
   };
 
   if (loading) {
@@ -89,7 +97,7 @@ export default function PlantsPage() {
             </span>
           </h1>
           <p className="text-xl text-blue-200">
-            Explore <span className="text-purple-400 font-semibold">{plants.length} medicinal plants</span> from AYUSH traditions
+            Explore <span className="text-purple-400 font-semibold">{allPlants.length} medicinal plants</span> from AYUSH traditions
           </p>
         </div>
 
@@ -124,10 +132,10 @@ export default function PlantsPage() {
           <div className="lg:col-span-3">
             {/* Results count */}
             <div className="mb-4 text-emerald-200">
-              Found {filteredPlants.length} plant{filteredPlants.length !== 1 ? 's' : ''}
+              Found {plants.length} plant{plants.length !== 1 ? 's' : ''}
             </div>
 
-            {filteredPlants.length === 0 ? (
+            {plants.length === 0 ? (
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20 text-center">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No plants found</h3>
@@ -143,7 +151,7 @@ export default function PlantsPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {filteredPlants.map((plant) => (
+                {plants.map((plant) => (
                   <PlantCard key={plant.id} plant={plant} />
                 ))}
               </div>

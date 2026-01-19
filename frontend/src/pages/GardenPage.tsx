@@ -1,27 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GardenScene from '../three/GardenScene';
 import PlantModal from '../components/PlantModal';
-import { Plant } from '../types';
+import { usePlants } from '../hooks/usePlants';
 
 export default function GardenPage() {
-  const [plants, setPlants] = useState<Plant[]>([]);
-  const [selectedPlant, setSelectedPlant] = useState<Plant | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { plants, loading } = usePlants();
+  const [selectedPlant, setSelectedPlant] = useState<typeof plants[0] | null>(null);
 
-  useEffect(() => {
-    fetch('/plants.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setPlants(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error loading plants:', err);
-        setLoading(false);
-      });
-  }, []);
-
-  const handlePlantClick = (plant: Plant) => {
+  const handlePlantClick = (plant: typeof plants[0]) => {
     setSelectedPlant(plant);
   };
 

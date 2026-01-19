@@ -1,32 +1,20 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppStore } from '../store/useAppStore';
-import { Plant } from '../types';
+import { usePlants } from '../hooks/usePlants';
 
 export default function MyGardenPage() {
   const { bookmarks, notes, removeBookmark, getNote, removeNote } = useAppStore();
-  const [plants, setPlants] = useState<Plant[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('/plants.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setPlants(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error loading plants:', err);
-        setLoading(false);
-      });
-  }, []);
+  const { plants, loading } = usePlants();
 
   const bookmarkedPlants = plants.filter((plant) => bookmarks.includes(plant.id));
 
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 flex items-center justify-center">
-        <div className="text-white text-2xl">Loading...</div>
+        <div className="text-center">
+          <div className="text-6xl mb-4 animate-pulse" style={{ filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.8))' }}>⭐</div>
+          <div className="text-2xl bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent font-semibold">Loading your garden...</div>
+        </div>
       </div>
     );
   }
