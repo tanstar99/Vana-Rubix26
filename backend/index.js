@@ -2,15 +2,16 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import connectDB from "./config/db.js";
+// import connectDB from "./config/db.js";
 
-import plantRoutes from "./routes/plantRoutes.js";
-import authRoutes from "./routes/authRoutes.js";
-import bookmarkRoutes from "./routes/bookMarkRoutes.js";
-import noteRoutes from "./routes/noteRoutes.js";
-import exportRoutes from "./routes/exportRoutes.js";
-import tourRoutes from "./routes/tourRoutes.js";
-import recommendationRoutes from "./routes/recommendations.js";
+// import plantRoutes from "./routes/plantRoutes.js";
+// import authRoutes from "./routes/authRoutes.js";
+// import bookmarkRoutes from "./routes/bookMarkRoutes.js";
+// import noteRoutes from "./routes/noteRoutes.js";
+// import exportRoutes from "./routes/exportRoutes.js";
+// import tourRoutes from "./routes/tourRoutes.js";
+// import recommendationRoutes from "./routes/recommendations.js";
+import chatRoutes from "./routes/chatRoutes.js";
 
 
 
@@ -24,19 +25,21 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes-:
-app.use("/api/plants", plantRoutes);
-app.use("/api/users", authRoutes);
-app.use("/api/bookmarks", bookmarkRoutes);
-app.use("/api/notes", noteRoutes);
-app.use("/api/export", exportRoutes);
-app.use("/api/tours", tourRoutes);
-app.use("/api/recommendations", recommendationRoutes);
+// app.use("/api/plants", plantRoutes);
+// app.use("/api/users", authRoutes);
+// app.use("/api/bookmarks", bookmarkRoutes);
+// app.use("/api/notes", noteRoutes);
+// app.use("/api/export", exportRoutes);
+// app.use("/api/tours", tourRoutes);
+// app.use("/api/recommendations", recommendationRoutes);
+app.use("/api/chat", chatRoutes);
 
 
 
 
 // Connect DB
-connectDB();
+// Connect DB
+// connectDB();
 
 // Test route
 app.get("/", (req, res) => {

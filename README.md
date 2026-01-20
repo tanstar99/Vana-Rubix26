@@ -87,7 +87,7 @@ Each tour includes:
 ### State Management
 - **Zustand** - Lightweight state management
 - **Zustand Persist** middleware for localStorage
-- No backend required - all data stored locally
+- **Hybrid Data**: Plant data static, RAG queries via API
 
 ### Data Structure
 - Static JSON files for plant and tour data
@@ -143,7 +143,8 @@ frontend/
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- npm or yarn
+- npm
+- Python 3.8+ (for RAG data ingestion)
 
 ### Installation
 
@@ -153,21 +154,43 @@ git clone <repository-url>
 cd Vana-Rubix26
 ```
 
-2. Install dependencies:
+2. **Backend Setup**:
+```bash
+cd backend
+npm install
+```
+
+3. **Frontend Setup**:
 ```bash
 cd frontend
 npm install
 ```
 
-3. Start the development server:
+### 🧠 Data Ingestion (First Time Only)
+To populate the RAG database with medicinal plant knowledge:
 ```bash
-npm run dev
+cd backend/rag_scripts
+pip install -r requirements.txt
+python ingest.py
 ```
 
-4. Open your browser and navigate to:
+### ▶️ Running the App
+
+1. **Start Backend Server** (Terminal 1):
+```bash
+cd backend
+npm start
 ```
-http://localhost:5173
+*Server runs at http://localhost:5000*
+
+2. **Start Frontend** (Terminal 2):
+```bash
+cd frontend
+npm run dev
 ```
+*App runs at http://localhost:5173*
+
+3. Open your browser and navigate to `http://localhost:5173`.
 
 ### Build for Production
 
@@ -330,7 +353,8 @@ Built with ❤️ for the Rubix Hackathon
 - **3D**: React Three Fiber
 - **Styling**: Tailwind CSS v4
 - **State**: Zustand with persistence
-- **No Backend**: 100% frontend application
+- **Backend**: Node.js + Express (RAG Pipeline)
+- **Database**: Pinecone (Vector DB) + LocalStorage (User Data)
 
 ---
 
