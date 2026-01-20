@@ -12,6 +12,7 @@ import cookieParser from "cookie-parser";
 // import tourRoutes from "./routes/tourRoutes.js";
 // import recommendationRoutes from "./routes/recommendations.js";
 import chatRoutes from "./routes/chatRoutes.js";
+import dietRoutes from "./routes/dietRoutes.js";
 
 
 
@@ -33,6 +34,7 @@ app.use(cookieParser());
 // app.use("/api/tours", tourRoutes);
 // app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/diet", dietRoutes);
 
 
 

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import TourCard from "../components/TourCard";
 import TourPlayer from "../components/TourPlayer";
 import TourQuestionForm from "../components/tourQuestionForm";
+import DietPlanRenderer from "../components/DietPlanRenderer";
 import { Tour, Plant } from "../types";
 
 export default function ToursPage() {
@@ -13,6 +14,42 @@ export default function ToursPage() {
   const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);
   const [showQuestionnaire, setShowQuestionnaire] = useState(false);
+
+  // Diet Plan State
+  const [dietLoading, setDietLoading] = useState(false);
+  const [dietPlan, setDietPlan] = useState<string | null>(null);
+
+  const generateDietPlan = async () => {
+    if (!selectedTour) return;
+
+    setDietLoading(true);
+    setDietPlan(null);
+
+    try {
+      // 1. Gather plant IDs from the tour steps
+      const tourPlantNames = selectedTour.steps.map(s => s.plantId);
+
+      // 2. Call Backend
+      const response = await fetch("http://localhost:5000/api/diet/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plantNames: tourPlantNames }),
+      });
+
+      const data = await response.json();
+
+      if (data.plan) {
+        setDietPlan(data.plan);
+      } else {
+        alert("Could not generate a plan at this time.");
+      }
+    } catch (error) {
+      console.error("Error generating diet plan:", error);
+      alert("Failed to generate diet plan. Please try again.");
+    } finally {
+      setDietLoading(false);
+    }
+  };
 
   useEffect(() => {
     Promise.all([
@@ -34,7 +71,7 @@ export default function ToursPage() {
 
   if (loading) {
     return (
-      <div 
+      <div
         className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden"
         style={{ backgroundImage: "url('/images/hero.png')" }}
       >
@@ -54,7 +91,7 @@ export default function ToursPage() {
   ========================== */
   if (selectedTour) {
     return (
-      <div 
+      <div
         className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed pt-32 pb-16 px-4 relative overflow-hidden"
         style={{ backgroundImage: "url('/images/hero.png')" }}
       >
@@ -83,11 +120,33 @@ export default function ToursPage() {
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               {selectedTour.description}
             </p>
+            {/* Diet Plan Button */}
+            <div className="flex justify-center gap-4 mt-6">
+              <button
+                onClick={generateDietPlan}
+                disabled={dietLoading}
+                className="px-6 py-3 rounded-full font-bold text-white shadow-lg bg-gradient-to-r from-teal-500 to-emerald-600 hover:scale-105 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {dietLoading ? "Creating Plan... 👩‍🍳" : "Create Diet Plan 🥗"}
+              </button>
+            </div>
+
+            {/* Diet Plan Result */}
+            {dietPlan && (
+              <div className="bg-slate-900/80 backdrop-blur-md rounded-2xl p-8 border border-emerald-500/30 text-left max-w-4xl mx-auto mt-8 animate-fade-in">
+                <h3 className="text-3xl font-bold text-emerald-300 mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-emerald-200 to-lime-200">
+                  🌿 Your Herbal Diet Plan
+                </h3>
+
+                <DietPlanRenderer planJson={dietPlan} />
+
+              </div>
+            )}
           </div>
 
           <TourPlayer tour={selectedTour} plants={plants} />
         </div>
-      </div>
+      </div >
     );
   }
 
@@ -95,7 +154,7 @@ export default function ToursPage() {
      TOURS LIST VIEW
   ========================== */
   return (
-    <div 
+    <div
       className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden px-4"
       style={{ backgroundImage: "url('/images/hero.png')" }}
     >
@@ -123,9 +182,8 @@ export default function ToursPage() {
           </div>
 
           {/* HOW IT WORKS & QUESTIONNAIRE - SIDE BY SIDE */}
-          <div className={`w-full grid gap-8 transition-all duration-500 ${
-            showQuestionnaire ? 'grid-cols-1 lg:grid-cols-2 max-w-7xl' : 'grid-cols-1 max-w-4xl'
-          }`}>
+          <div className={`w-full grid gap-8 transition-all duration-500 ${showQuestionnaire ? 'grid-cols-1 lg:grid-cols-2 max-w-7xl' : 'grid-cols-1 max-w-4xl'
+            }`}>
             {/* HOW IT WORKS */}
             <div className="bg-gradient-to-r from-emerald-900/40 to-green-900/40 backdrop-blur-xl rounded-2xl border border-emerald-500/40 p-8 h-fit">
               <h2 className="text-2xl font-bold text-emerald-300 mb-8 text-center">
