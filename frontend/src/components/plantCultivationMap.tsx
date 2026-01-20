@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import cultivationData from "../data/plantCultivationMap.json";
 
-interface CultivationZone {
-  label: string;
-  state: string;
-  coordinates: {
-    lat: number;
-    lng: number;
-  };
-}
-
 // Add custom animation styles
 const animationStyles = `
   @keyframes fadeIn {

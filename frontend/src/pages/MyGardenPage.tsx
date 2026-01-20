@@ -25,19 +25,20 @@ export default function MyGardenPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-white text-2xl">Loading...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 pt-24 pb-12 px-4">
+    <div className="min-h-screen pt-24 pb-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-4 font-['Cinzel']">
-            ⭐ My Garden
+          <br /><br />
+          <h1 className="text-5xl font-bold pl-7 text-white mb-4 font-['Cinzel']">
+            My Garden
           </h1>
           <p className="text-xl text-emerald-200">
             Your bookmarked plants and personal notes

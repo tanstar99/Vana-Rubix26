@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PlantCard from '../components/PlantCard';
 import SearchBar from '../components/SearchBar';
 import FilterPanel from '../components/FilterPanel';
@@ -6,6 +7,7 @@ import { Plant } from '../types';
 import { filterPlants } from '../utils/filterPlants';
 
 export default function PlantsPage() {
+  const navigate = useNavigate();
   const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);
   
@@ -98,7 +100,7 @@ export default function PlantsPage() {
         </div>
 
         {/* Search Bar */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center items-center gap-4 mb-16">
           <div className="w-full max-w-3xl">
             <SearchBar
               value={searchQuery}
@@ -106,6 +108,12 @@ export default function PlantsPage() {
               placeholder="Search by name or properties..."
             />
           </div>
+          <button
+            onClick={() => navigate('/my-garden')}
+            className="px-6 py-3 bg-emerald-900/30 backdrop-blur-md border border-emerald-500/40 rounded-xl text-emerald-200 font-semibold hover:bg-emerald-900/50 hover:text-white transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
+          > 
+            <span>My Garden</span>
+          </button>
         </div>
 
         {/* Content Grid */}

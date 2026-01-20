@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import PlantDetailView from '../components/PlantDetailView';
+import ImmersivePlantDetail from '../components/ImmersivePlantDetail';
 
 export default function PlantDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -12,10 +12,9 @@ export default function PlantDetailPage() {
   if (!id) return null;
 
   return (
-    <PlantDetailView
+    <ImmersivePlantDetail
       plantId={id}
       onBack={handleBack}
-      isOverlay={false}
     />
   );
 }

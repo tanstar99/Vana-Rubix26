@@ -229,6 +229,22 @@ function AnimatedRoutes() {
           }
         />
         <Route
+          path="/my-garden"
+          element={
+            <>
+              <MandalaTransition />
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <MyGardenPage />
+              </motion.div>
+            </>
+          }
+        />
+        <Route
           path="/map"
           element={
             <>

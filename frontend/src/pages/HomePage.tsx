@@ -14,7 +14,7 @@ export default function HomePage() {
 
       {/* --- HERO SECTION --- */}
       <section className="relative z-10 pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mb-27 mx-auto text-center">
           
           {/* Floating Icon */}
           <div className="mb-8 inline-block animate-bounce duration-[3000ms]">
@@ -53,7 +53,7 @@ export default function HomePage() {
               <span>🎯</span> Start Tour
             </Link>
           </div>
-          <br /><br /><br />
+          
         </div>
       </section>
 
