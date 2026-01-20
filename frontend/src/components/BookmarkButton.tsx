@@ -12,16 +12,13 @@ export default function BookmarkButton({ plantId, className = '' }: BookmarkButt
   return (
     <button
       onClick={() => toggleBookmark(plantId)}
-      className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-        bookmarked
-          ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white shadow-lg hover:shadow-xl hover:shadow-yellow-500/50'
-          : 'bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20'
-      } ${className}`}
+      className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${bookmarked
+          ? 'bg-white text-black shadow-lg scale-105'
+          : 'bg-transparent border border-zinc-600 text-zinc-300 hover:border-white hover:text-white'
+        } ${className}`}
     >
-      <span className="flex items-center gap-2">
-        <span className="text-xl">{bookmarked ? '★' : '☆'}</span>
-        {bookmarked ? 'Bookmarked' : 'Bookmark'}
-      </span>
+      <span className="text-lg">{bookmarked ? '★' : '☆'}</span>
+      <span>{bookmarked ? 'Saved' : 'Save'}</span>
     </button>
   );
 }
