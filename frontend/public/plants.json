@@ -3,14 +3,43 @@
     "id": "tulsi",
     "scientificName": "Ocimum sanctum",
     "commonName": "Holy Basil (Tulsi)",
-    "localNames": ["Tulsi", "Tulasi", "Vrinda"],
-    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "localNames": [
+      "Tulsi",
+      "Tulasi",
+      "Vrinda"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Unani",
+      "Siddha"
+    ],
     "descriptionShort": "Sacred herb known for its powerful immune-boosting and adaptogenic properties.",
     "descriptionFull": "Tulsi, or Holy Basil, is revered in Ayurveda as the 'Queen of Herbs'. It has been used for thousands of years in Indian medicine for its remarkable healing properties. The plant contains powerful antioxidants and adaptogenic compounds that help the body cope with stress, enhance immunity, and promote overall wellness.",
-    "tags": ["immunity", "stress", "respiratory", "adaptogen"],
-    "diseaseCategories": ["cold", "fever", "cough", "stress", "anxiety"],
-    "partsUsed": ["leaf", "seed", "root"],
-    "medicinalProperties": ["anti-inflammatory", "antioxidant", "adaptogenic", "antimicrobial", "immunomodulatory"],
+    "tags": [
+      "immunity",
+      "stress",
+      "respiratory",
+      "adaptogen"
+    ],
+    "diseaseCategories": [
+      "cold",
+      "fever",
+      "cough",
+      "stress",
+      "anxiety"
+    ],
+    "partsUsed": [
+      "leaf",
+      "seed",
+      "root"
+    ],
+    "medicinalProperties": [
+      "anti-inflammatory",
+      "antioxidant",
+      "adaptogenic",
+      "antimicrobial",
+      "immunomodulatory"
+    ],
     "therapeuticUses": [
       {
         "condition": "Common Cold",
@@ -45,9 +74,16 @@
       "origin": "Indian subcontinent"
     },
     "media": {
-      "images": ["/images/tulsi-1.jpg", "/images/tulsi-2.jpg"],
-      "videos": ["/videos/tulsi-benefits.mp4"],
-      "audio": ["/audio/tulsi-info.mp3"],
+      "images": [
+        "/images/tulsi-1.jpg",
+        "/images/tulsi-2.jpg"
+      ],
+      "videos": [
+        "/videos/tulsi-benefits.mp4"
+      ],
+      "audio": [
+        "/audio/tulsi-info.mp3"
+      ],
       "model3dUrl": null
     },
     "gardenPlacement": {
@@ -61,14 +97,40 @@
     "id": "ashwagandha",
     "scientificName": "Withania somnifera",
     "commonName": "Ashwagandha (Indian Ginseng)",
-    "localNames": ["Ashwagandha", "Asgandh", "Indian Ginseng"],
-    "ayushSystems": ["Ayurveda", "Unani"],
+    "localNames": [
+      "Ashwagandha",
+      "Asgandh",
+      "Indian Ginseng"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Unani"
+    ],
     "descriptionShort": "Powerful adaptogenic herb that enhances vitality, reduces stress, and improves overall health.",
     "descriptionFull": "Ashwagandha is one of the most important herbs in Ayurveda and has been used for over 3,000 years. Known as an adaptogen, it helps the body manage stress. It also provides numerous other benefits for body and brain, including boosting brain function, lowering blood sugar and cortisol levels, and helping fight symptoms of anxiety and depression.",
-    "tags": ["stress", "adaptogen", "energy", "vitality"],
-    "diseaseCategories": ["stress", "anxiety", "fatigue", "insomnia"],
-    "partsUsed": ["root", "leaf"],
-    "medicinalProperties": ["adaptogenic", "anti-inflammatory", "antioxidant", "immunomodulatory", "neuroprotective"],
+    "tags": [
+      "stress",
+      "adaptogen",
+      "energy",
+      "vitality"
+    ],
+    "diseaseCategories": [
+      "stress",
+      "anxiety",
+      "fatigue",
+      "insomnia"
+    ],
+    "partsUsed": [
+      "root",
+      "leaf"
+    ],
+    "medicinalProperties": [
+      "adaptogenic",
+      "anti-inflammatory",
+      "antioxidant",
+      "immunomodulatory",
+      "neuroprotective"
+    ],
     "therapeuticUses": [
       {
         "condition": "Chronic Stress",
@@ -103,7 +165,10 @@
       "origin": "India"
     },
     "media": {
-      "images": ["/images/ashwagandha-1.jpg", "/images/ashwagandha-2.jpg"],
+      "images": [
+        "/images/ashwagandha-1.jpg",
+        "/images/ashwagandha-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -119,14 +184,43 @@
     "id": "neem",
     "scientificName": "Azadirachta indica",
     "commonName": "Neem",
-    "localNames": ["Neem", "Nimba", "Margosa"],
-    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "localNames": [
+      "Neem",
+      "Nimba",
+      "Margosa"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Unani",
+      "Siddha"
+    ],
     "descriptionShort": "Nature's pharmacy with powerful antibacterial, antifungal, and purifying properties.",
     "descriptionFull": "Neem is often called the 'village pharmacy' in India due to its wide range of medicinal properties. Every part of the neem tree has been used in traditional medicine for thousands of years. It's particularly valued for its ability to purify blood, support skin health, and boost immunity.",
-    "tags": ["skin", "immunity", "detox", "antibacterial"],
-    "diseaseCategories": ["skin conditions", "diabetes", "infections", "dental problems"],
-    "partsUsed": ["leaf", "bark", "seed", "oil"],
-    "medicinalProperties": ["antibacterial", "antifungal", "antiviral", "anti-inflammatory", "blood purifier"],
+    "tags": [
+      "skin",
+      "immunity",
+      "detox",
+      "antibacterial"
+    ],
+    "diseaseCategories": [
+      "skin conditions",
+      "diabetes",
+      "infections",
+      "dental problems"
+    ],
+    "partsUsed": [
+      "leaf",
+      "bark",
+      "seed",
+      "oil"
+    ],
+    "medicinalProperties": [
+      "antibacterial",
+      "antifungal",
+      "antiviral",
+      "anti-inflammatory",
+      "blood purifier"
+    ],
     "therapeuticUses": [
       {
         "condition": "Skin Conditions",
@@ -161,7 +255,10 @@
       "origin": "India and Burma"
     },
     "media": {
-      "images": ["/images/neem-1.jpg", "/images/neem-2.jpg"],
+      "images": [
+        "/images/neem-1.jpg",
+        "/images/neem-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -177,14 +274,41 @@
     "id": "turmeric",
     "scientificName": "Curcuma longa",
     "commonName": "Turmeric (Haldi)",
-    "localNames": ["Haldi", "Manjal", "Pasupu"],
-    "ayushSystems": ["Ayurveda", "Siddha", "Unani"],
+    "localNames": [
+      "Haldi",
+      "Manjal",
+      "Pasupu"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Siddha",
+      "Unani"
+    ],
     "descriptionShort": "Golden spice with powerful anti-inflammatory and antioxidant properties.",
     "descriptionFull": "Turmeric has been used in India for thousands of years as both a spice and medicinal herb. Curcumin, the main active ingredient in turmeric, has powerful anti-inflammatory effects and is a very strong antioxidant. It's used to treat a wide variety of conditions including inflammation, digestive issues, and skin problems.",
-    "tags": ["inflammation", "antioxidant", "digestion", "immunity"],
-    "diseaseCategories": ["inflammation", "arthritis", "digestion", "skin conditions"],
-    "partsUsed": ["rhizome", "root"],
-    "medicinalProperties": ["anti-inflammatory", "antioxidant", "antimicrobial", "hepatoprotective", "wound healing"],
+    "tags": [
+      "inflammation",
+      "antioxidant",
+      "digestion",
+      "immunity"
+    ],
+    "diseaseCategories": [
+      "inflammation",
+      "arthritis",
+      "digestion",
+      "skin conditions"
+    ],
+    "partsUsed": [
+      "rhizome",
+      "root"
+    ],
+    "medicinalProperties": [
+      "anti-inflammatory",
+      "antioxidant",
+      "antimicrobial",
+      "hepatoprotective",
+      "wound healing"
+    ],
     "therapeuticUses": [
       {
         "condition": "Arthritis",
@@ -219,7 +343,10 @@
       "origin": "India"
     },
     "media": {
-      "images": ["/images/turmeric-1.jpg", "/images/turmeric-2.jpg"],
+      "images": [
+        "/images/turmeric-1.jpg",
+        "/images/turmeric-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -235,14 +362,40 @@
     "id": "brahmi",
     "scientificName": "Bacopa monnieri",
     "commonName": "Brahmi",
-    "localNames": ["Brahmi", "Water Hyssop", "Thyme-leaved Gratiola"],
-    "ayushSystems": ["Ayurveda", "Siddha"],
+    "localNames": [
+      "Brahmi",
+      "Water Hyssop",
+      "Thyme-leaved Gratiola"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Siddha"
+    ],
     "descriptionShort": "Brain tonic herb that enhances memory, learning, and cognitive function.",
     "descriptionFull": "Brahmi is a renowned brain tonic in Ayurvedic medicine. It has been used for centuries to improve memory, reduce anxiety, and treat epilepsy. Modern research supports its cognitive-enhancing properties and its ability to improve information processing, learning rate, and memory consolidation.",
-    "tags": ["brain", "memory", "cognitive", "learning"],
-    "diseaseCategories": ["memory loss", "anxiety", "ADHD", "cognitive decline"],
-    "partsUsed": ["whole plant", "leaf"],
-    "medicinalProperties": ["nootropic", "adaptogenic", "neuroprotective", "anxiolytic", "antioxidant"],
+    "tags": [
+      "brain",
+      "memory",
+      "cognitive",
+      "learning"
+    ],
+    "diseaseCategories": [
+      "memory loss",
+      "anxiety",
+      "ADHD",
+      "cognitive decline"
+    ],
+    "partsUsed": [
+      "whole plant",
+      "leaf"
+    ],
+    "medicinalProperties": [
+      "nootropic",
+      "adaptogenic",
+      "neuroprotective",
+      "anxiolytic",
+      "antioxidant"
+    ],
     "therapeuticUses": [
       {
         "condition": "Memory Enhancement",
@@ -277,7 +430,10 @@
       "origin": "Indian wetlands"
     },
     "media": {
-      "images": ["/images/brahmi-1.jpg", "/images/brahmi-2.jpg"],
+      "images": [
+        "/images/brahmi-1.jpg",
+        "/images/brahmi-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -293,14 +449,42 @@
     "id": "amla",
     "scientificName": "Phyllanthus emblica",
     "commonName": "Indian Gooseberry (Amla)",
-    "localNames": ["Amla", "Amalaki", "Nellikai"],
-    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "localNames": [
+      "Amla",
+      "Amalaki",
+      "Nellikai"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Unani",
+      "Siddha"
+    ],
     "descriptionShort": "Superfruit rich in Vitamin C with powerful rejuvenating and immunity-boosting properties.",
     "descriptionFull": "Amla is considered one of the most rejuvenating herbs in Ayurveda. It's exceptionally rich in Vitamin C and antioxidants. The fruit is used to enhance immunity, improve digestion, promote hair growth, and support overall vitality. It's a key ingredient in many Ayurvedic formulations including the famous Chyawanprash.",
-    "tags": ["immunity", "antioxidant", "digestion", "rejuvenation"],
-    "diseaseCategories": ["weak immunity", "diabetes", "hair loss", "eye problems"],
-    "partsUsed": ["fruit", "seed", "leaf"],
-    "medicinalProperties": ["antioxidant", "immunomodulatory", "hepatoprotective", "cardioprotective", "anti-aging"],
+    "tags": [
+      "immunity",
+      "antioxidant",
+      "digestion",
+      "rejuvenation"
+    ],
+    "diseaseCategories": [
+      "weak immunity",
+      "diabetes",
+      "hair loss",
+      "eye problems"
+    ],
+    "partsUsed": [
+      "fruit",
+      "seed",
+      "leaf"
+    ],
+    "medicinalProperties": [
+      "antioxidant",
+      "immunomodulatory",
+      "hepatoprotective",
+      "cardioprotective",
+      "anti-aging"
+    ],
     "therapeuticUses": [
       {
         "condition": "Immunity",
@@ -335,7 +519,10 @@
       "origin": "Indian subcontinent"
     },
     "media": {
-      "images": ["/images/amla-1.jpg", "/images/amla-2.jpg"],
+      "images": [
+        "/images/amla-1.jpg",
+        "/images/amla-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -351,14 +538,41 @@
     "id": "ginger",
     "scientificName": "Zingiber officinale",
     "commonName": "Ginger (Adrak)",
-    "localNames": ["Adrak", "Inji", "Allam"],
-    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "localNames": [
+      "Adrak",
+      "Inji",
+      "Allam"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Unani",
+      "Siddha"
+    ],
     "descriptionShort": "Warming spice excellent for digestion, nausea, and inflammation.",
     "descriptionFull": "Ginger is a flowering plant whose rhizome is widely used as a spice and in traditional medicine. It has been used for thousands of years for its digestive properties and ability to reduce nausea. Ginger contains gingerol, a compound with powerful anti-inflammatory and antioxidant effects.",
-    "tags": ["digestion", "nausea", "inflammation", "immunity"],
-    "diseaseCategories": ["nausea", "indigestion", "arthritis", "cold"],
-    "partsUsed": ["rhizome", "root"],
-    "medicinalProperties": ["anti-inflammatory", "antiemetic", "digestive", "antimicrobial", "circulatory stimulant"],
+    "tags": [
+      "digestion",
+      "nausea",
+      "inflammation",
+      "immunity"
+    ],
+    "diseaseCategories": [
+      "nausea",
+      "indigestion",
+      "arthritis",
+      "cold"
+    ],
+    "partsUsed": [
+      "rhizome",
+      "root"
+    ],
+    "medicinalProperties": [
+      "anti-inflammatory",
+      "antiemetic",
+      "digestive",
+      "antimicrobial",
+      "circulatory stimulant"
+    ],
     "therapeuticUses": [
       {
         "condition": "Nausea",
@@ -393,7 +607,10 @@
       "origin": "Southeast Asian tropical rainforests"
     },
     "media": {
-      "images": ["/images/ginger-1.jpg", "/images/ginger-2.jpg"],
+      "images": [
+        "/images/ginger-1.jpg",
+        "/images/ginger-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -409,14 +626,41 @@
     "id": "aloe-vera",
     "scientificName": "Aloe barbadensis miller",
     "commonName": "Aloe Vera",
-    "localNames": ["Ghritkumari", "Katralai", "Musabbar"],
-    "ayushSystems": ["Ayurveda", "Unani", "Siddha"],
+    "localNames": [
+      "Ghritkumari",
+      "Katralai",
+      "Musabbar"
+    ],
+    "ayushSystems": [
+      "Ayurveda",
+      "Unani",
+      "Siddha"
+    ],
     "descriptionShort": "Succulent plant with soothing gel used for skin health and digestive support.",
     "descriptionFull": "Aloe Vera has been used medicinally for thousands of years. The gel inside its leaves contains vitamins, minerals, and antioxidants. It's widely used for skin conditions, burns, and wound healing. Internally, it supports digestive health and helps detoxify the body.",
-    "tags": ["skin", "digestion", "healing", "detox"],
-    "diseaseCategories": ["skin conditions", "burns", "constipation", "diabetes"],
-    "partsUsed": ["gel", "leaf"],
-    "medicinalProperties": ["wound healing", "anti-inflammatory", "moisturizing", "laxative", "antioxidant"],
+    "tags": [
+      "skin",
+      "digestion",
+      "healing",
+      "detox"
+    ],
+    "diseaseCategories": [
+      "skin conditions",
+      "burns",
+      "constipation",
+      "diabetes"
+    ],
+    "partsUsed": [
+      "gel",
+      "leaf"
+    ],
+    "medicinalProperties": [
+      "wound healing",
+      "anti-inflammatory",
+      "moisturizing",
+      "laxative",
+      "antioxidant"
+    ],
     "therapeuticUses": [
       {
         "condition": "Burns & Wounds",
@@ -451,7 +695,10 @@
       "origin": "Arabian Peninsula"
     },
     "media": {
-      "images": ["/images/aloe-1.jpg", "/images/aloe-2.jpg"],
+      "images": [
+        "/images/aloe-1.jpg",
+        "/images/aloe-2.jpg"
+      ],
       "videos": [],
       "audio": [],
       "model3dUrl": null
@@ -461,6 +708,92 @@
       "x": -2,
       "y": 0,
       "z": 3
+    }
+  },
+  {
+    "id": "giloy",
+    "scientificName": "Tinospora cordifolia",
+    "commonName": "Giloy (Heart-Leaved Moonseed)",
+    "localNames": [
+      "Giloy",
+      "Guduchi",
+      "Amrita"
+    ],
+    "ayushSystems": [
+      "Ayurveda"
+    ],
+    "descriptionShort": "A revered herb known as 'Amrita' or 'Root of Immortality', famous for its immunity-boosting and detoxifying/purifying effects.",
+    "descriptionFull": "Giloy (Tinospora cordifolia) is an Ayurvedic climbing shrub known as 'Amrita', translating to 'root of immortality'. It is highly valued for its immunomodulatory properties and ability to treat chronic fevers. It acts as a rejuvenator and helps in detoxification, boosting the body's resistance to infections.",
+    "tags": [
+      "immunity",
+      "fever",
+      "detox",
+      "rejuvenation"
+    ],
+    "diseaseCategories": [
+      "fever",
+      "weak immunity",
+      "arthritis",
+      "digestive disorders"
+    ],
+    "partsUsed": [
+      "stem",
+      "root"
+    ],
+    "medicinalProperties": [
+      "immunomodulatory",
+      "antipyretic",
+      "anti-inflammatory",
+      "antioxidant",
+      "hepatoprotective"
+    ],
+    "therapeuticUses": [
+      {
+        "condition": "Chronic Fever",
+        "benefit": "Helps reduce high fevers and treats infections like dengue"
+      },
+      {
+        "condition": "Immunity Boosting",
+        "benefit": "Enhances the body's defense mechanism against pathogens"
+      },
+      {
+        "condition": "Arthritis",
+        "benefit": "Reduces joint pain and inflammation"
+      }
+    ],
+    "dosage": {
+      "form": "Juice, powder, or decoration",
+      "amount": "15-30ml juice or 1-3g powder",
+      "frequency": "Twice daily"
+    },
+    "precautions": [
+      "May lower blood sugar - caution for diabetics",
+      "Use with caution during pregnancy",
+      "May cause constipation in some individuals"
+    ],
+    "cultivation": {
+      "soil": "Grows in wide variety of soils, prefers rocky terrain",
+      "water": "Moderate watering, drought-tolerant",
+      "climate": "Tropical and subtropical regions"
+    },
+    "habitat": {
+      "region": "India, Sri Lanka, Myanmar",
+      "origin": "Tropical India"
+    },
+    "media": {
+      "images": [
+        "/images/giloy-1.jpg",
+        "/images/giloy-2.jpg"
+      ],
+      "videos": [],
+      "audio": [],
+      "model3dUrl": null
+    },
+    "gardenPlacement": {
+      "zone": "center-back",
+      "x": -3,
+      "y": 0,
+      "z": -3
     }
   }
 ]
