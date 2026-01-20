@@ -12,12 +12,12 @@ export default function Navbar() {
     { path: '/garden', label: 'Garden' },
     { path: '/plants', label: 'Plants' },
     { path: '/tours', label: 'Tours' },
-    { path: '/my', label: 'My Garden' },
-    { path: '/chat', label: 'Chat' },
+    { path: '/map', label: 'Explore India' },
+    { path: '/chat', label: 'Vana SAGE' },
   ];
 
   return (
-    <nav className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-12 lg:right-12 z-50 bg-white/10 backdrop-blur-xl rounded-full border-2 border-amber-400/40 shadow-lg" style={{ boxShadow: '0 4px 20px rgba(251, 191, 36, 0.1), 0 0 20px rgba(251, 191, 36, 0.08)' }}>
+    <nav className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-12 lg:right-12 z-50 bg-white/10  backdrop-blur-xl rounded-full border-2 border-amber-400/40 shadow-lg" style={{ boxShadow: '0 4px 20px rgba(251, 191, 36, 0.1), 0 0 20px rgba(251, 191, 36, 0.08)' }}>
       <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between h-20 py-3 md:py-4">
           {/* Logo */}

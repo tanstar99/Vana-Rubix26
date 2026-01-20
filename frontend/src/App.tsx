@@ -8,6 +8,7 @@ import PlantDetailPage from './pages/PlantDetailPage';
 import ToursPage from './pages/ToursPage';
 import MyGardenPage from './pages/MyGardenPage';
 import ChatPage from './pages/ChatPage';
+import PlantCultivationMap from './components/PlantCultivationMap';
 
 // Page transition variants
 const pageVariants = {
@@ -228,7 +229,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/my"
+          path="/map"
           element={
             <>
               <MandalaTransition />
@@ -238,7 +239,7 @@ function AnimatedRoutes() {
                 animate="animate"
                 exit="exit"
               >
-                <MyGardenPage />
+                <PlantCultivationMap />
               </motion.div>
             </>
           }

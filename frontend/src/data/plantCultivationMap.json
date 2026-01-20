@@ -1,0 +1,328 @@
+[
+  {
+    "plantId": "tulsi",
+    "plantName": "Tulsi (Holy Basil)",
+    "zones": [
+      {
+        "label": "Gangetic Plains",
+        "state": "Uttar Pradesh",
+        "coordinates": {
+          "lat": 26.5,
+          "lng": 80.5
+        }
+      },
+      {
+        "label": "Deccan Belt",
+        "state": "Maharashtra",
+        "coordinates": {
+          "lat": 19.5,
+          "lng": 75.5
+        }
+      },
+      {
+        "label": "Tamil Nadu Region",
+        "state": "Tamil Nadu",
+        "coordinates": {
+          "lat": 11.0,
+          "lng": 79.5
+        }
+      },
+      {
+        "label": "Western Ghats",
+        "state": "Karnataka",
+        "coordinates": {
+          "lat": 13.5,
+          "lng": 75.0
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "ashwagandha",
+    "plantName": "Ashwagandha",
+    "zones": [
+      {
+        "label": "Rajasthani Arid Region",
+        "state": "Rajasthan",
+        "coordinates": {
+          "lat": 27.0,
+          "lng": 75.5
+        }
+      },
+      {
+        "label": "Semi-Arid Deccan",
+        "state": "Madhya Pradesh",
+        "coordinates": {
+          "lat": 22.5,
+          "lng": 77.5
+        }
+      },
+      {
+        "label": "Telangana Plateau",
+        "state": "Telangana",
+        "coordinates": {
+          "lat": 17.5,
+          "lng": 78.5
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "neem",
+    "plantName": "Neem",
+    "zones": [
+      {
+        "label": "Northern Plains",
+        "state": "Punjab",
+        "coordinates": {
+          "lat": 31.5,
+          "lng": 75.0
+        }
+      },
+      {
+        "label": "Central India",
+        "state": "Madhya Pradesh",
+        "coordinates": {
+          "lat": 22.5,
+          "lng": 78.5
+        }
+      },
+      {
+        "label": "Deccan Plateau",
+        "state": "Karnataka",
+        "coordinates": {
+          "lat": 14.5,
+          "lng": 75.5
+        }
+      },
+      {
+        "label": "Coastal South",
+        "state": "Kerala",
+        "coordinates": {
+          "lat": 10.5,
+          "lng": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "turmeric",
+    "plantName": "Turmeric",
+    "zones": [
+      {
+        "label": "Telangana Spice Belt",
+        "state": "Telangana",
+        "coordinates": {
+          "lat": 17.0,
+          "lng": 78.5
+        }
+      },
+      {
+        "label": "Tamil Nadu Cultivation",
+        "state": "Tamil Nadu",
+        "coordinates": {
+          "lat": 10.5,
+          "lng": 77.5
+        }
+      },
+      {
+        "label": "Western Ghats Region",
+        "state": "Kerala",
+        "coordinates": {
+          "lat": 11.5,
+          "lng": 75.5
+        }
+      },
+      {
+        "label": "Assam Foothills",
+        "state": "Assam",
+        "coordinates": {
+          "lat": 26.0,
+          "lng": 93.0
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "brahmi",
+    "plantName": "Brahmi",
+    "zones": [
+      {
+        "label": "Wetland Regions",
+        "state": "West Bengal",
+        "coordinates": {
+          "lat": 24.5,
+          "lng": 88.5
+        }
+      },
+      {
+        "label": "Coastal Andhra",
+        "state": "Andhra Pradesh",
+        "coordinates": {
+          "lat": 16.5,
+          "lng": 80.5
+        }
+      },
+      {
+        "label": "Tamil Nadu Wetlands",
+        "state": "Tamil Nadu",
+        "coordinates": {
+          "lat": 11.5,
+          "lng": 79.5
+        }
+      },
+      {
+        "label": "Kerala Backwaters",
+        "state": "Kerala",
+        "coordinates": {
+          "lat": 10.0,
+          "lng": 76.0
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "amla",
+    "plantName": "Amla (Indian Gooseberry)",
+    "zones": [
+      {
+        "label": "Northern Fruit Belt",
+        "state": "Uttar Pradesh",
+        "coordinates": {
+          "lat": 27.5,
+          "lng": 79.5
+        }
+      },
+      {
+        "label": "Central Plateau",
+        "state": "Madhya Pradesh",
+        "coordinates": {
+          "lat": 23.5,
+          "lng": 78.0
+        }
+      },
+      {
+        "label": "Deccan Orchards",
+        "state": "Maharashtra",
+        "coordinates": {
+          "lat": 20.0,
+          "lng": 75.5
+        }
+      },
+      {
+        "label": "Karnataka Groves",
+        "state": "Karnataka",
+        "coordinates": {
+          "lat": 14.5,
+          "lng": 75.5
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "ginger",
+    "plantName": "Ginger",
+    "zones": [
+      {
+        "label": "Western Ghats Spice Region",
+        "state": "Kerala",
+        "coordinates": {
+          "lat": 11.0,
+          "lng": 76.5
+        }
+      },
+      {
+        "label": "Nilgiri Hills",
+        "state": "Tamil Nadu",
+        "coordinates": {
+          "lat": 11.5,
+          "lng": 76.5
+        }
+      },
+      {
+        "label": "Coastal Karnataka",
+        "state": "Karnataka",
+        "coordinates": {
+          "lat": 13.0,
+          "lng": 75.0
+        }
+      },
+      {
+        "label": "Northeast Foothills",
+        "state": "Assam",
+        "coordinates": {
+          "lat": 26.5,
+          "lng": 92.5
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "aloe-vera",
+    "plantName": "Aloe Vera",
+    "zones": [
+      {
+        "label": "Rajasthan Semi-Arid",
+        "state": "Rajasthan",
+        "coordinates": {
+          "lat": 26.5,
+          "lng": 74.5
+        }
+      },
+      {
+        "label": "Gujarat Arid Region",
+        "state": "Gujarat",
+        "coordinates": {
+          "lat": 23.5,
+          "lng": 72.5
+        }
+      },
+      {
+        "label": "Deccan Dry Zone",
+        "state": "Telangana",
+        "coordinates": {
+          "lat": 16.5,
+          "lng": 78.0
+        }
+      }
+    ]
+  },
+  {
+    "plantId": "giloy",
+    "plantName": "Giloy (Tinospora)",
+    "zones": [
+      {
+        "label": "Indo-Gangetic Plain",
+        "state": "Bihar",
+        "coordinates": {
+          "lat": 25.5,
+          "lng": 85.0
+        }
+      },
+      {
+        "label": "Central Deciduous Forest",
+        "state": "Chhattisgarh",
+        "coordinates": {
+          "lat": 21.5,
+          "lng": 81.5
+        }
+      },
+      {
+        "label": "Deccan Forest Region",
+        "state": "Maharashtra",
+        "coordinates": {
+          "lat": 19.5,
+          "lng": 77.5
+        }
+      },
+      {
+        "label": "Southern Peninsula",
+        "state": "Andhra Pradesh",
+        "coordinates": {
+          "lat": 16.0,
+          "lng": 79.5
+        }
+      }
+    ]
+  }
+]
