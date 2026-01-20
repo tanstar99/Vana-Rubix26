@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950 relative overflow-x-hidden selection:bg-pink-500/30">
+    <div 
+      className="min-h-screen bg-slate-950 relative overflow-x-hidden selection:bg-pink-500/30 bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: "url('/images/hero.jpg')" }}
+    >
       
-      {/* --- BACKGROUND EFFECTS --- */}
+      {/* --- OVERLAY --- */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* --- BACKGROUND EFFECTS (reduced for visibility) --- */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950/40" />
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 animate-pulse delay-1000" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/20 to-indigo-950/10" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 animate-pulse delay-1000" />
       </div>
 
       {/* --- HERO SECTION --- */}
@@ -17,24 +23,22 @@ export default function HomePage() {
           
           {/* Floating Icon */}
           <div className="mb-8 inline-block animate-bounce duration-[3000ms]">
-            <span className="text-7xl lg:text-8xl filter drop-shadow-lg">🌿</span>
+            <span className="text-7xl lg:text-8xl" style={{ filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))' }}>🧠</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-serif tracking-tight mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
-              VANA
-            </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-serif tracking-tight mb-6 leading-tight text-white">
+            VANA AI
           </h1>
 
-          <p className="text-lg md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-12">
-            Explore the ancient wisdom of <span className="text-purple-400 font-medium">AYUSH</span> medicinal plants through an immersive <span className="text-pink-400 font-medium">3D experience</span>.
+          <p className="text-lg md:text-2xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-12">
+            Explore the ancient wisdom of <span className="text-cyan-300 font-medium">AYUSH</span> medicinal plants through an immersive <span className="text-teal-300 font-medium">3D experience</span>.
           </p>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <Link
               to="/garden"
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-lg font-semibold rounded-xl shadow-lg shadow-blue-900/20 transition-all hover:-translate-y-1 hover:shadow-blue-500/30 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white text-lg font-semibold rounded-xl shadow-lg shadow-cyan-900/20 transition-all hover:-translate-y-1 hover:shadow-cyan-500/30 flex items-center justify-center gap-2"
             >
               <span>🏛️</span> Enter Garden
             </Link>
@@ -48,7 +52,7 @@ export default function HomePage() {
             
              <Link
               to="/tours"
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white text-lg font-semibold rounded-xl shadow-lg shadow-pink-900/20 transition-all hover:-translate-y-1 hover:shadow-pink-500/30 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white text-lg font-semibold rounded-xl shadow-lg shadow-teal-900/20 transition-all hover:-translate-y-1 hover:shadow-teal-500/30 flex items-center justify-center gap-2"
             >
               <span>🎯</span> Start Tour
             </Link>
@@ -61,7 +65,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Why Explore Vana?</h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -97,17 +101,17 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Ready to Explore <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">
               Nature's Pharmacy?
             </span>
           </h2>
-          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
              Start your journey into the world of traditional herbal medicine today.
           </p>
           
           <Link
             to="/garden"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-white text-slate-900 text-xl font-bold rounded-full hover:scale-105 hover:bg-blue-50 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-white text-slate-900 text-xl font-bold rounded-full hover:scale-105 hover:bg-cyan-50 transition-all duration-300 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
           >
             Begin Your Journey <span>→</span>
           </Link>
@@ -146,7 +150,7 @@ const features = [
     icon: "🌳",
     title: "3D Garden View",
     desc: "Walk through our virtual garden to find medicinal plants in their natural habitats.",
-    colorClass: "from-blue-500 to-cyan-500"
+    colorClass: "from-cyan-500 to-teal-500"
   },
   {
     icon: "🔍",
@@ -181,8 +185,8 @@ const features = [
 ];
 
 const stats = [
-  { value: "8+", label: "Medicinal Plants", grad: "from-blue-400 to-cyan-400" },
+  { value: "8+", label: "Medicinal Plants", grad: "from-cyan-400 to-teal-400" },
   { value: "4", label: "Guided Tours", grad: "from-purple-400 to-pink-400" },
   { value: "5", label: "AYUSH Systems", grad: "from-pink-400 to-rose-400" },
-  { value: "100%", label: "Natural Healing", grad: "from-cyan-400 to-blue-400" },
+  { value: "100%", label: "Natural Healing", grad: "from-teal-400 to-cyan-400" },
 ];

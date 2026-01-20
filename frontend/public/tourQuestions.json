@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "question": "What is your primary health concern?",
+    "options": [
+      { "label": "Low immunity / frequent illness", "tour": "immunity" },
+      { "label": "Digestive issues", "tour": "digestion" },
+      { "label": "Stress, anxiety, poor sleep", "tour": "stress" },
+      { "label": "Skin problems", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "How often do you fall sick?",
+    "options": [
+      { "label": "Very often", "tour": "immunity" },
+      { "label": "Occasionally", "tour": "digestion" },
+      { "label": "Rarely", "tour": "stress" },
+      { "label": "Never", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "How is your digestion?",
+    "options": [
+      { "label": "Poor / irregular", "tour": "digestion" },
+      { "label": "Normal", "tour": "immunity" },
+      { "label": "Sensitive stomach", "tour": "stress" },
+      { "label": "Excellent", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Your stress levels are usually?",
+    "options": [
+      { "label": "Very high", "tour": "stress" },
+      { "label": "Moderate", "tour": "immunity" },
+      { "label": "Low", "tour": "digestion" },
+      { "label": "Minimal", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "How is your sleep quality?",
+    "options": [
+      { "label": "Poor", "tour": "stress" },
+      { "label": "Average", "tour": "digestion" },
+      { "label": "Good", "tour": "immunity" },
+      { "label": "Excellent", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Any skin-related issues?",
+    "options": [
+      { "label": "Acne / rashes", "tour": "skin" },
+      { "label": "Dry / dull skin", "tour": "digestion" },
+      { "label": "Sensitive skin", "tour": "stress" },
+      { "label": "No issues", "tour": "immunity" }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Your diet is mostly?",
+    "options": [
+      { "label": "Heavy / oily", "tour": "digestion" },
+      { "label": "Balanced", "tour": "immunity" },
+      { "label": "Irregular", "tour": "stress" },
+      { "label": "Light / healthy", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Do you experience anxiety?",
+    "options": [
+      { "label": "Frequently", "tour": "stress" },
+      { "label": "Sometimes", "tour": "digestion" },
+      { "label": "Rarely", "tour": "immunity" },
+      { "label": "Never", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Energy levels throughout the day?",
+    "options": [
+      { "label": "Low", "tour": "digestion" },
+      { "label": "Moderate", "tour": "immunity" },
+      { "label": "High", "tour": "stress" },
+      { "label": "Very high", "tour": "skin" }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What do you want to improve the most?",
+    "options": [
+      { "label": "Overall health", "tour": "immunity" },
+      { "label": "Mental calm", "tour": "stress" },
+      { "label": "Gut health", "tour": "digestion" },
+      { "label": "Skin glow", "tour": "skin" }
+    ]
+  }
+]
