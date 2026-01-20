@@ -88,105 +88,95 @@ export default function TourQuestionForm() {
   const progress = ((current + 1) / questions.length) * 100;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 px-4">
-      {/* Centered Content Wrapper */}
-      <div className="w-full max-w-xl flex flex-col items-center">
-        {/* Progress Bar Header */}
-        <div className="w-full mb-6">
-          <h2 className="text-white text-center text-2xl font-bold mb-4">
-            Personalized Tour Questionnaire
-          </h2>
-          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-emerald-500 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
+    <div className="w-full flex flex-col">
+      {/* Progress Bar */}
+      <div className="w-full mb-4">
+        <div className="w-full h-1.5 bg-emerald-900/30 rounded-full overflow-hidden">
+          <motion.div
+            className="h-full bg-gradient-to-r from-emerald-400 to-lime-400 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.5 }}
+          />
         </div>
-
-        {/* Question Card - Reduced Size & Compact Padding */}
-        <div className="w-full overflow-hidden min-h-[320px]">
-          {" "}
-          {/* Fixed min-height prevents "jumping" layout */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={question.id}
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -50, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="w-full bg-gradient-to-r from-emerald-900/40 to-teal-900/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl"
-            >
-              <p className="text-white text-lg font-semibold mb-6">
-                {question.question}
-              </p>
-
-              <div className="grid grid-cols-1 gap-3">
-                {question.options.map((opt, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleSelect(opt)}
-                    className={`p-4 rounded-xl border text-white text-left transition-all duration-200 text-sm md:text-base
-                      ${
-                        answers[current] === opt.tour
-                          ? "bg-emerald-600/50 border-emerald-400 translate-x-1 shadow-[0_0_15px_rgba(52,211,153,0.3)]"
-                          : "bg-white/5 border-white/10 hover:bg-white/10"
-                      }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Navigation - Better Spacing */}
-        <div className="flex items-center justify-between mt-8 w-full gap-4">
-          <button
-            onClick={handlePrevious}
-            disabled={current === 0}
-            className={`flex-1 py-3 rounded-xl text-white font-bold transition-all
-              ${
-                current === 0
-                  ? "bg-white/5 opacity-30 cursor-not-allowed"
-                  : "bg-white/10 hover:bg-white/20 border border-white/10"
-              }`}
-          >
-            ← Previous
-          </button>
-
-          {current === questions.length - 1 ? (
-            <button
-              onClick={handleSubmit}
-              disabled={!answers[current]}
-              className={`flex-1 py-3 rounded-xl text-black font-bold bg-gradient-to-r from-emerald-400 to-teal-400 hover:scale-[1.02] active:scale-[0.98] transition-all
-                ${!answers[current] ? "opacity-50 grayscale cursor-not-allowed" : ""}`}
-            >
-              Get My Tour
-            </button>
-          ) : (
-            <button
-              onClick={handleNext}
-              disabled={!answers[current]}
-              className={`flex-1 py-3 rounded-xl text-white font-bold transition-all
-                ${
-                  !answers[current]
-                    ? "bg-gray-700 cursor-not-allowed opacity-50"
-                    : "bg-emerald-500 hover:bg-emerald-600 shadow-lg shadow-emerald-900/20"
-                }`}
-            >
-              Next →
-            </button>
-          )}
-        </div>
-
-        {/* Footer Info */}
-        <p className="mt-6 text-white/40 text-xs tracking-widest uppercase font-medium">
+        <p className="mt-2 text-emerald-300/60 text-xs text-center">
           Question {current + 1} of {questions.length}
         </p>
+      </div>
+
+      {/* Question Card */}
+      <div className="w-full overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={question.id}
+            initial={{ x: 30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -30, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-full"
+          >
+            <p className="text-white text-base font-semibold mb-4">
+              {question.question}
+            </p>
+
+            <div className="space-y-2.5">
+              {question.options.map((opt, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleSelect(opt)}
+                  className={`w-full p-3 rounded-lg border text-white text-left transition-all duration-200 text-sm
+                    ${
+                      answers[current] === opt.tour
+                        ? "bg-emerald-600/40 border-emerald-400/60 shadow-lg shadow-emerald-500/20"
+                        : "bg-slate-800/40 border-emerald-700/30 hover:bg-slate-700/50 hover:border-emerald-500/40"
+                    }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Navigation */}
+      <div className="flex items-center justify-between mt-6 w-full gap-3">
+        <button
+          onClick={handlePrevious}
+          disabled={current === 0}
+          className={`flex-1 py-2.5 rounded-lg text-white text-sm font-semibold transition-all
+            ${
+              current === 0
+                ? "bg-slate-800/30 opacity-30 cursor-not-allowed"
+                : "bg-slate-800/50 hover:bg-slate-700/60 border border-emerald-700/30"
+            }`}
+        >
+          ← Previous
+        </button>
+
+        {current === questions.length - 1 ? (
+          <button
+            onClick={handleSubmit}
+            disabled={!answers[current]}
+            className={`flex-1 py-2.5 rounded-lg text-white text-sm font-bold bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-400 hover:to-lime-400 transition-all shadow-lg
+              ${!answers[current] ? "opacity-50 cursor-not-allowed" : ""}`}
+          >
+            Get My Tour 🎯
+          </button>
+        ) : (
+          <button
+            onClick={handleNext}
+            disabled={!answers[current]}
+            className={`flex-1 py-2.5 rounded-lg text-white text-sm font-semibold transition-all
+              ${
+                !answers[current]
+                  ? "bg-slate-800/40 cursor-not-allowed opacity-40"
+                  : "bg-emerald-600/60 hover:bg-emerald-600/80 border border-emerald-500/40 shadow-lg"
+              }`}
+          >
+            Next →
+          </button>
+        )}
       </div>
     </div>
   );

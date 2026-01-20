@@ -60,10 +60,10 @@ export default function FilterPanel({
     selectedPartsUsed.length > 0;
 
   return (
-    <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-xl font-bold text-white flex items-center gap-2">
-          <span>🔍</span> Filters
+    <div className="bg-slate-900/70 backdrop-blur-xl rounded-2xl border border-emerald-500/30 p-5 sticky top-24">
+      <div className="flex justify-between items-center mb-5">
+        <h3 className="text-lg font-bold text-emerald-300 flex items-center gap-2">
+          <span className="text-xl">🔍</span> Filters
         </h3>
         <button
           onClick={() => setIsExpanded(!isExpanded)}

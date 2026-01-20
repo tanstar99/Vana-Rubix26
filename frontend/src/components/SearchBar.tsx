@@ -6,13 +6,13 @@ interface SearchBarProps {
 
 export default function SearchBar({ value, onChange, placeholder = 'Search plants...' }: SearchBarProps) {
   return (
-    <div className="relative w-full max-w-2xl">
+    <div className="relative w-full">
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all"
+        className="w-full px-6 py-3.5 bg-slate-900/60 backdrop-blur-xl border border-emerald-500/40 rounded-xl text-white placeholder-emerald-300/50 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-lime-400 transition-all shadow-lg"
       />
       <svg
         className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-white/50"

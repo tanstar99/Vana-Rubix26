@@ -65,45 +65,54 @@ export default function PlantsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-6xl mb-4 animate-pulse" style={{ filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.8))' }}>📚</div>
-          <div className="text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">Loading plants...</div>
+      <div 
+        className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden"
+        style={{ backgroundImage: "url('/images/hero.png')" }}
+      >
+        <div className="absolute inset-0 bg-black" style={{ opacity: 0.8 }} />
+        <div className="min-h-screen flex items-center justify-center relative z-10">
+          <div className="text-center">
+            <div className="text-6xl mb-4 animate-pulse" style={{ filter: 'drop-shadow(0 0 20px rgba(16, 185, 129, 0.8))' }}></div>
+            <div className="text-2xl bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent font-semibold">Loading plants...</div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 pt-24 pb-12 px-4 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 particles-bg"></div>
-      <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+    <div 
+      className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed pt-32 pb-16 px-6 relative overflow-hidden"
+      style={{ backgroundImage: "url('/images/hero.png')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70" />
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-8" style={{ animation: 'fadeInUp 0.8s ease-out' }}>
+        <div className="text-center mb-12 mt-4" style={{ animation: 'fadeInUp 0.8s ease-out' }}>
           <h1 className="text-6xl font-bold text-white mb-4 font-['Cinzel']">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
-              📚 Plant Compendium
+            <span className="bg-gradient-to-r pl-1 from-emerald-400 via-lime-400 to-green-400 bg-clip-text text-transparent neon-text">
+              Aushadhi Sangrah
             </span>
           </h1>
-          <p className="text-xl text-blue-200">
-            Explore <span className="text-purple-400 font-semibold">{plants.length} medicinal plants</span> from AYUSH traditions
+          <p className="text-xl pl-7 text-emerald-200">
+            Explore <span className="text-lime-400 font-semibold">{plants.length} medicinal plants</span> from AYUSH traditions
           </p>
         </div>
 
         {/* Search Bar */}
-        <div className="flex justify-center mb-8">
-          <SearchBar
-            value={searchQuery}
-            onChange={setSearchQuery}
-            placeholder="Search by name or properties..."
-          />
+        <div className="flex justify-center mb-16">
+          <div className="w-full max-w-3xl">
+            <SearchBar
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Search by name or properties..."
+            />
+          </div>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Filters Sidebar */}
           <div className="lg:col-span-1">
             <FilterPanel
@@ -121,11 +130,8 @@ export default function PlantsPage() {
           </div>
 
           {/* Plants Grid */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             {/* Results count */}
-            <div className="mb-4 text-emerald-200">
-              Found {filteredPlants.length} plant{filteredPlants.length !== 1 ? 's' : ''}
-            </div>
 
             {filteredPlants.length === 0 ? (
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20 text-center">
@@ -142,7 +148,7 @@ export default function PlantsPage() {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredPlants.map((plant) => (
                   <PlantCard key={plant.id} plant={plant} />
                 ))}

@@ -34,8 +34,17 @@ export default function ToursPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 flex items-center justify-center">
-        <div className="text-white text-2xl">Loading tours...</div>
+      <div 
+        className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden"
+        style={{ backgroundImage: "url('/images/hero.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="min-h-screen flex items-center justify-center relative z-10">
+          <div className="text-center">
+            <div className="text-6xl mb-4 animate-pulse" style={{ filter: 'drop-shadow(0 0 20px rgba(16, 185, 129, 0.8))' }}>🎯</div>
+            <div className="text-2xl bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent font-semibold">Loading tours...</div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -45,8 +54,12 @@ export default function ToursPage() {
   ========================== */
   if (selectedTour) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-green-900 to-emerald-950 pt-32 pb-16 px-4">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <div 
+        className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed pt-32 pb-16 px-4 relative overflow-hidden"
+        style={{ backgroundImage: "url('/images/hero.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="max-w-5xl mx-auto space-y-10 relative z-10">
           <button
             onClick={() => navigate("/tours")}
             className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
@@ -82,14 +95,12 @@ export default function ToursPage() {
      TOURS LIST VIEW
   ========================== */
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 relative overflow-hidden px-4">
-      {/* Background */}
-      <div className="absolute inset-0 particles-bg"></div>
-      <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-      <div
-        className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: "1s" }}
-      ></div>
+    <div 
+      className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden px-4"
+      style={{ backgroundImage: "url('/images/hero.png')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70" />
 
       {/* PUSH CONTENT BELOW NAVBAR */}
       <div className="relative z-10 pt-36 pb-24 min-h-screen flex justify-center">
@@ -97,94 +108,101 @@ export default function ToursPage() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h1 className="text-6xl font-bold text-white font-['Cinzel']">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
-                🎯 Guided Tours
+              <span className="bg-gradient-to-r pl-5 from-emerald-400 via-lime-400 to-green-400 bg-clip-text text-transparent neon-text">
+                Guided Tours
               </span>
             </h1>
 
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Explore{" "}
-              <span className="text-purple-400 font-semibold">
+              <span className="text-lime-400 font-semibold">
                 themed collections
               </span>{" "}
               of medicinal plants for specific health benefits
             </p>
           </div>
 
-          {/* HOW IT WORKS */}
-          <div className="w-full max-w-4xl bg-gradient-to-r from-amber-900/30 to-emerald-900/30 backdrop-blur-md rounded-2xl border border-amber-500/30 p-12">
-            <h2 className="text-2xl font-bold text-white mb-10 text-center">
-              How Tours Work
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-16 text-white/80">
-              {/* POINT 1 WITH BUTTON */}
-              <div className="flex gap-4">
-                <span className="text-2xl">1️⃣</span>
-                <div className="space-y-3">
-                  <p>
-                    Either explore tours manually or get a personalized tour
-                    recommendation based on your health needs.
-                  </p>
-
-                  <button
-                    onClick={() => setShowQuestionnaire(true)}
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-lg
-                               bg-gradient-to-r from-emerald-500 to-teal-500
-                               text-black font-semibold hover:scale-105 transition"
-                  >
-                    🎯 Get Personalized Tour
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <span className="text-2xl">2️⃣</span>
-                <span>
-                  Follow a step-by-step journey through selected medicinal
-                  plants
-                </span>
-              </div>
-
-              <div className="flex gap-4">
-                <span className="text-2xl">3️⃣</span>
-                <span>
-                  Learn about each plant's benefits and traditional uses
-                </span>
-              </div>
-
-              <div className="flex gap-4">
-                <span className="text-2xl">4️⃣</span>
-                <span>
-                  Bookmark plants you find interesting for later reference
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* QUESTIONNAIRE (ONLY AFTER CLICK) */}
-          {showQuestionnaire && (
-            <div
-              className="w-full max-w-2xl bg-gradient-to-r from-slate-900/50 to-blue-900/50
-                backdrop-blur-md rounded-2xl border border-white/10 p-6 mx-auto"
-            >
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">
-                Personalized Tour Questionnaire
+          {/* HOW IT WORKS & QUESTIONNAIRE - SIDE BY SIDE */}
+          <div className={`w-full grid gap-8 transition-all duration-500 ${
+            showQuestionnaire ? 'grid-cols-1 lg:grid-cols-2 max-w-7xl' : 'grid-cols-1 max-w-4xl'
+          }`}>
+            {/* HOW IT WORKS */}
+            <div className="bg-gradient-to-r from-emerald-900/40 to-green-900/40 backdrop-blur-xl rounded-2xl border border-emerald-500/40 p-8 h-fit">
+              <h2 className="text-2xl font-bold text-emerald-300 mb-8 text-center">
+                How Tours Work
               </h2>
 
-              <TourQuestionForm />
+              <div className="space-y-6 text-white/80">
+                {/* POINT 1 WITH BUTTON */}
+                <div className="flex gap-4">
+                  <span className="text-2xl flex-shrink-0">1️⃣</span>
+                  <div className="space-y-3">
+                    <p>
+                      Either explore tours manually or get a personalized tour
+                      recommendation based on your health needs.
+                    </p>
+
+                    {!showQuestionnaire && (
+                      <button
+                        onClick={() => setShowQuestionnaire(true)}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
+                                   bg-gradient-to-r from-emerald-500 to-lime-500
+                                   text-white font-semibold hover:scale-105 transition shadow-lg"
+                      >
+                        🎯 Get Personalized Tour
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-2xl flex-shrink-0">2️⃣</span>
+                  <span>
+                    Follow a step-by-step journey through selected medicinal
+                    plants
+                  </span>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-2xl flex-shrink-0">3️⃣</span>
+                  <span>
+                    Learn about each plant's benefits and traditional uses
+                  </span>
+                </div>
+
+                <div className="flex gap-4">
+                  <span className="text-2xl flex-shrink-0">4️⃣</span>
+                  <span>
+                    Bookmark plants you find interesting for later reference
+                  </span>
+                </div>
+              </div>
             </div>
-          )}
+
+            {/* QUESTIONNAIRE (ONLY AFTER CLICK) */}
+            {showQuestionnaire && (
+              <div className="bg-gradient-to-r from-slate-900/60 to-emerald-900/60 backdrop-blur-xl rounded-2xl border border-emerald-500/40 p-8 h-fit">
+                <div className="flex justify-between items-center mb-6">
+                  <h2 className="text-2xl font-bold text-emerald-300">
+                    Personalized Tour
+                  </h2>
+                  <button
+                    onClick={() => setShowQuestionnaire(false)}
+                    className="text-emerald-300 hover:text-emerald-200 transition"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <TourQuestionForm />
+              </div>
+            )}
+          </div>
 
           {/* TOUR CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
             {tours.map((tour) => (
-              <div
-                key={tour.id}
-                className="w-full max-w-sm p-4 flex justify-center"
-              >
-                <TourCard tour={tour} />
-              </div>
+              <TourCard key={tour.id} tour={tour} />
             ))}
           </div>
         </div>

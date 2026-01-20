@@ -17,13 +17,18 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/88 backdrop-blur-2xl border-b border-blue-500/20 shadow-lg shadow-blue-500/10">
-      <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+    <nav className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-12 lg:right-12 z-50 bg-white/10 backdrop-blur-xl rounded-full border-2 border-amber-400/40 shadow-lg" style={{ boxShadow: '0 4px 20px rgba(251, 191, 36, 0.1), 0 0 20px rgba(251, 191, 36, 0.08)' }}>
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between h-20 py-3 md:py-4">
           {/* Logo */}
-          <Link to="/" className="group flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
-            <span className="text-3xl md:text-4xl transform group-hover:rotate-12 transition-transform duration-300" style={{ filter: 'drop-shadow(0 0 10px rgba(59, 130, 246, 0.5))' }}>🌿</span>
-            <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-['Cinzel']">
+          <Link to="/" className="group flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
+            <img 
+              src="/images/logo.png" 
+              alt="VANA Logo" 
+              className="h-16 md:h-20 w-auto transform group-hover:rotate-12 transition-transform duration-300" 
+              style={{ filter: 'drop-shadow(0 0 8px rgba(217, 119, 6, 0.4))' }}
+            />
+            <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 bg-clip-text text-transparent font-['Playfair_Display']" style={{ textShadow: '0 0 12px rgba(251, 191, 36, 0.3)' }}>
               VANA
             </span>
           </Link>
@@ -36,13 +41,16 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 lg:px-6 py-2.5 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 ${isActive(link.path) ? 'text-white' : 'text-blue-200 hover:text-white'}`}
-                style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both` }}
+                className={`relative px-4 lg:px-6 py-2.5 rounded-full text-base lg:text-lg font-medium transition-all duration-300 ${isActive(link.path) ? 'text-white' : 'text-white/90 hover:text-white'}`}
+                style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`, fontFamily: 'Georgia, serif', textShadow: isActive(link.path) ? '' : '0 1px 3px rgba(0, 0, 0, 0.3)' }}
               >
                 {isActive(link.path) ? (
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-lg blur-sm opacity-80"></span>
+                  <>
+                    <span className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 rounded-full shadow-lg" style={{ boxShadow: '0 0 15px rgba(251, 191, 36, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2)' }}></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 rounded-full blur-sm opacity-30"></span>
+                  </>
                 ) : (
-                  <span className="absolute inset-0 bg-slate-800/50 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 bg-white/10 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300 border border-white/20 hover:border-white/30"></span>
                 )}
                 <span className="relative z-10">{link.label}</span>
               </Link>
@@ -52,7 +60,8 @@ export default function Navbar() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-white p-2 rounded-lg hover:bg-slate-800/50 border border-blue-500/30 transition-all duration-300"
+              className="md:hidden text-white p-2 rounded-lg hover:bg-white/20 border-2 border-amber-400/40 transition-all duration-300 hover:border-amber-400/60 hover:shadow-lg"
+              style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}
             >
             <svg
               className="w-6 h-6"
@@ -82,14 +91,15 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-blue-500/20 bg-slate-950/95 backdrop-blur-2xl" style={{ animation: 'fadeInUp 0.3s ease-out' }}>
+        <div className="md:hidden mt-2 border-t-2 border-amber-400/40 bg-slate-900/80 backdrop-blur-xl rounded-b-3xl shadow-lg" style={{ animation: 'fadeInUp 0.3s ease-out' }}>
           <div className="px-4 pt-3 pb-4 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-md font-medium transition-all duration-300 ${isActive(link.path) ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' : 'text-blue-200 hover:bg-slate-800/50 hover:text-white'}`}
+                className={`block px-4 py-3 rounded-full font-medium transition-all duration-300 ${isActive(link.path) ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-lg shadow-amber-500/30' : 'text-white/90 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20'}`}
+                style={{ fontFamily: 'Georgia, serif', textShadow: isActive(link.path) ? '' : '0 1px 3px rgba(0, 0, 0, 0.3)' }}
               >
                 {link.label}
               </Link>
