@@ -149,7 +149,7 @@ export default function ToursPage() {
                                    bg-gradient-to-r from-emerald-500 to-lime-500
                                    text-white font-semibold hover:scale-105 transition shadow-lg"
                       >
-                        🎯 Get Personalized Tour
+                        Get Personalized Tour
                       </button>
                     )}
                   </div>
