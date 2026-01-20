@@ -103,14 +103,17 @@ router.post("/generate", async (req, res) => {
                 Strict Rules:
                 1. Use ONLY the provided context to find medicinal properties or traditional uses if available.
                 2. Suggest PRACTICAL and tasty vegetarian recipes.
-                3. You MUST return the output as a valid JSON object with the following structure:
+                3. Do not suggest recipes that are not vegetarian.
+                4. Also give benefits of the plants in the recipe.
+                5. You MUST return the output as a valid JSON object with the following structure:
                 {
-                    "breakfast": [ { "dish": "Dish Name", "recipe": "## Ingredients\n- Item 1\n- Item 2\n\n## Instructions\n1. Step 1..." } ],
-                    "lunch": [ { "dish": "Dish Name", "recipe": "Detailed recipe with Markdown formatting (## Headers, - Bullets)..." } ],
-                    "dinner": [ { "dish": "Dish Name", "recipe": "Detailed recipe with Markdown formatting..." } ]
+                    "breakfast": [ { "dish": "Dish Name", "recipe": "**Ingredients:**\\n- 1 cup ingredient X\\n- 2 tbsp ingredient Y\\n\\n**Instructions:**\\n1. Step one...\\n2. Step two...", "benefits": "Key health benefits..." } ],
+                    "lunch": [ { "dish": "Dish Name", "recipe": "**Ingredients:**\\n- ...\\n\\n**Instructions:**\\n1. ...", "benefits": "..." } ],
+                    "dinner": [ { "dish": "Dish Name", "recipe": "**Ingredients:**\\n- ...\\n\\n**Instructions:**\\n1. ...", "benefits": "..." } ]
                 }
-                4. Do NOT preserve any other text or markdown formatting outside the JSON.
-                5. If a plant is non-edible or toxic based on context, DO NOT suggest eating it.
+                6. Do NOT preserve any other text or markdown formatting outside the JSON.
+                7. Ensure every recipe includes specific QUANTITIES (e.g., 1 cup, 2 tsp).
+                8. If a plant is non-edible or toxic based on context, DO NOT suggest eating it.
                 `
             },
             {

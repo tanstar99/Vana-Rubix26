@@ -7,6 +7,7 @@ type MealSection = "breakfast" | "lunch" | "dinner";
 interface Dish {
     dish: string;
     recipe: string;
+    benefits?: string;
 }
 
 interface DietPlanData {
@@ -98,6 +99,15 @@ export default function DietPlanRenderer({ planJson }: DietPlanRendererProps) {
                                                     <ReactMarkdown>{item.recipe}</ReactMarkdown>
                                                 </div>
                                             </div>
+
+                                            {item.benefits && (
+                                                <div className="mb-4 p-3 bg-emerald-900/30 border border-emerald-500/20 rounded-lg">
+                                                    <h4 className="text-emerald-400 font-bold mb-1 flex items-center gap-2">
+                                                        <span>🌿</span> Benefits
+                                                    </h4>
+                                                    <p className="text-emerald-100/80 text-sm">{item.benefits}</p>
+                                                </div>
+                                            )}
 
                                             <button
                                                 onClick={() => handleOrder(item.dish)}
