@@ -24,6 +24,7 @@ const styles = `
     width: 100vw;
     position: relative;
     overflow: hidden;
+    padding-top: 6rem;
 
     background:
         radial-gradient(circle at center,
@@ -194,27 +195,30 @@ const styles = `
    HEADER
 ========================= */
 .chat-header {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
     text-align: center;
-    background: rgba(10, 25, 15, 0.75);
+    background: rgba(10, 25, 15, 0.85);
     backdrop-filter: blur(14px);
     z-index: 10;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(129, 199, 132, 0.2);
 }
 
 .chat-header h1 {
     margin: 0;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-family: 'Cinzel', serif;
     background: linear-gradient(to bottom, #a5d6a7, #66bb6a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 8px rgba(129, 199, 132, 0.4));
 }
 
 .chat-header p {
     margin-top: 0.5rem;
     color: var(--text-secondary);
     font-style: italic;
+    font-size: 1rem;
 }
 
 /* =========================
@@ -222,7 +226,7 @@ const styles = `
 ========================= */
 .messages-area {
     flex: 1;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
@@ -231,6 +235,7 @@ const styles = `
     gap: 1.5rem;
     overflow-y: auto;
     z-index: 1;
+    min-height: 0;
 }
 
 /* =========================
@@ -267,9 +272,9 @@ const styles = `
 .system-bubble {
     background:
         radial-gradient(circle at top left,
-            rgba(120, 180, 140, 0.15),
+            rgba(120, 180, 140, 0.2),
             transparent 60%),
-        rgba(35, 55, 40, 0.9);
+        rgba(35, 55, 40, 0.95);
 
     color: #eaf5ec;
     border-radius: 1.75rem;
@@ -277,7 +282,7 @@ const styles = `
     font-family: 'Georgia', serif;
 
     box-shadow:
-        0 0 0 2px rgba(120, 180, 140, 0.1),
+        0 0 0 1px rgba(120, 180, 140, 0.15),
         0 15px 40px rgba(0, 0, 0, 0.6);
 
     animation: sageBreath 6s ease-in-out infinite;
@@ -346,9 +351,10 @@ const styles = `
 .input-area {
     position: sticky;
     bottom: 0;
-    padding: 2rem;
-    background: linear-gradient(to top, rgba(0, 10, 0, 0.9), transparent);
+    padding: 1.5rem 2rem 2rem;
+    background: linear-gradient(to top, rgba(0, 10, 0, 0.95), rgba(0, 10, 0, 0.7));
     z-index: 10;
+    border-top: 1px solid rgba(129, 199, 132, 0.15);
 }
 
 .input-wrapper {
@@ -356,17 +362,17 @@ const styles = `
     margin: 0 auto;
     display: flex;
     align-items: center;
-    background: rgba(30, 40, 30, 0.8);
+    background: rgba(30, 40, 30, 0.9);
     backdrop-filter: blur(15px);
     border-radius: 2rem;
     padding: 0.75rem 1.5rem;
-    border: 1px solid rgba(129, 199, 132, 0.25);
+    border: 1px solid rgba(129, 199, 132, 0.3);
     transition: all 0.3s ease;
 }
 
 .input-wrapper:focus-within {
     border-color: #66bb6a;
-    box-shadow: 0 0 35px rgba(102, 187, 106, 0.4);
+    box-shadow: 0 0 25px rgba(102, 187, 106, 0.3);
 }
 
 .chat-input {
@@ -393,8 +399,11 @@ const styles = `
     margin-left: 0.75rem;
     border: none;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .action-button:hover {
@@ -402,13 +411,28 @@ const styles = `
     transform: translateY(-2px);
 }
 
+.action-button .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #a5d6a7;
+}
+
 .send-button {
     background: linear-gradient(135deg, #66bb6a, #2e7d32);
 }
 
+.send-button:hover {
+    background: linear-gradient(135deg, #81c784, #388e3c);
+}
+
+.send-button .icon {
+    color: white;
+}
+
 .mic-button.active {
     animation: pulse 1.5s infinite;
-    border: 1px solid #ef5350;
+    border: 2px solid #ef5350;
+    background: rgba(239, 83, 80, 0.2);
 }
 
 /* =========================
