@@ -66,8 +66,7 @@ export default function PlantsPage() {
   if (loading) {
     return (
       <div 
-        className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden"
-        style={{ backgroundImage: "url('/images/hero.png')" }}
+        className="min-h-screen relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-black" style={{ opacity: 0.8 }} />
         <div className="min-h-screen flex items-center justify-center relative z-10">
@@ -82,11 +81,9 @@ export default function PlantsPage() {
 
   return (
     <div 
-      className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed pt-32 pb-16 px-6 relative overflow-hidden"
-      style={{ backgroundImage: "url('/images/hero.png')" }}
+      className="min-h-screen pt-32 pb-16 px-6 relative overflow-hidden"
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12 mt-4" style={{ animation: 'fadeInUp 0.8s ease-out' }}>

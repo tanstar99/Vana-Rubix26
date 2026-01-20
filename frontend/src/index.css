@@ -14,3 +14,21 @@ body {
   background: #020617;
   color: white;
 }
+
+/* Prevent layout shifts during page transitions */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Ensure motion divs don't cause reflow */
+[data-projection-id] {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth transitions for page content */
+[data-projection-id] > * {
+  width: 100%;
+}

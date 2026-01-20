@@ -155,11 +155,9 @@ export default function ToursPage() {
   ========================== */
   return (
     <div
-      className="min-h-screen bg-slate-950 bg-cover bg-center bg-fixed relative overflow-hidden px-4"
-      style={{ backgroundImage: "url('/images/hero.png')" }}
+      className="min-h-screen relative overflow-hidden px-4"
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
 
       {/* PUSH CONTENT BELOW NAVBAR */}
       <div className="relative z-10 pt-36 pb-24 min-h-screen flex justify-center">

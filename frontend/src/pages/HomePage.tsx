@@ -3,16 +3,11 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
   return (
     <div 
-      className="min-h-screen bg-slate-950 relative overflow-x-hidden selection:bg-pink-500/30 bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('/images/hero.png')" }}
+      className="min-h-screen relative overflow-x-hidden selection:bg-pink-500/30"
     >
       
-      {/* --- OVERLAY --- */}
-      <div className="absolute inset-0 bg-black/70" />
-
       {/* --- BACKGROUND EFFECTS (reduced for visibility) --- */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/20 to-indigo-950/10" />
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 animate-pulse" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 animate-pulse delay-1000" />
       </div>
