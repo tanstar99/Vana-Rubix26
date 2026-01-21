@@ -157,6 +157,16 @@ interface ImmersivePlantDetailProps {
   onBack: () => void;
 }
 
+// YouTube video mapping for specific plants
+const plantVideoMap: Record<string, string> = {
+  ashwagandha: '30iCPkk2xKo',
+  tulsi: 'h0b-hK9-oqE',
+  // Add more plant-specific videos here
+};
+
+// Default video for plants without specific videos
+const DEFAULT_VIDEO_ID = 'GcJYDEFFKhc';
+
 // 3D Model Component without auto-rotation
 function PlantModel({ modelPath }: { modelPath: string }) {
   try {
@@ -497,7 +507,7 @@ export default function ImmersivePlantDetail({ plantId, onBack }: ImmersivePlant
                 <iframe
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/h0b-hK9-oqE`}
+                  src={`https://www.youtube.com/embed/${plantVideoMap[plantId] || DEFAULT_VIDEO_ID}`}
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

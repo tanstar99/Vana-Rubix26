@@ -52,6 +52,7 @@ export default function GardenPage() {
           { name: 'left', keys: ['ArrowLeft', 'a', 'A'] },
           { name: 'right', keys: ['ArrowRight', 'd', 'D'] },
           { name: 'jump', keys: ['Space'] },
+          { name: 'run', keys: ['Shift'] },
         ]}
       >
         <Canvas shadows camera={{ fov: 50 }}>

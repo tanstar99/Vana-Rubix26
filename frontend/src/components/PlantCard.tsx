@@ -32,10 +32,21 @@ export default function PlantCard({ plant }: PlantCardProps) {
         )}
       </button>
 
-      {/* Plant Image Placeholder with Glow */}
+      {/* Plant Image with Glow */}
       <div className="relative w-full h-40 bg-gradient-to-br from-emerald-900/40 via-green-900/40 to-teal-900/40 rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-emerald-500/30">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-lime-500/10 group-hover:from-emerald-500/20 group-hover:to-lime-500/20 transition-all duration-300"></div>
-        <span className="text-6xl transform group-hover:scale-110 transition-all duration-300 relative z-10" style={{ filter: 'drop-shadow(0 0 20px rgba(16, 185, 129, 0.6))' }}>🌿</span>
+        <img 
+          src={`/plant_page/${plant.id.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}.jpg`}
+          alt={plant.commonName}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          onError={(e) => {
+            // Fallback to emoji if image not found
+            e.currentTarget.style.display = 'none';
+            const fallback = e.currentTarget.nextElementSibling;
+            if (fallback) (fallback as HTMLElement).style.display = 'block';
+          }}
+        />
+        <span className="text-6xl transform group-hover:scale-110 transition-all duration-300 relative z-10 hidden" style={{ filter: 'drop-shadow(0 0 20px rgba(16, 185, 129, 0.6))' }}>🌿</span>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/60 transition-all duration-300"></div>
       </div>
 
       {/* Plant Info */}
