@@ -22,7 +22,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold font-serif tracking-tight mb-6 pl-5 leading-tight text-white">
-            VANA AI
+            VANA
           </h1>
           <br />
           <p className="text-lg md:text-2xl text-slate-200 max-w-3xl pl-5 mx-auto leading-relaxed mb-12">
@@ -31,7 +31,7 @@ export default function HomePage() {
           <br />
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className="flex flex-col pl-6 sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <Link
               to="/garden"
               className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white text-lg font-semibold rounded-xl shadow-lg shadow-emerald-900/20 transition-all hover:-translate-y-1 hover:shadow-emerald-500/30 flex items-center justify-center gap-2"
