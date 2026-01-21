@@ -32,3 +32,92 @@ body {
 [data-projection-id] > * {
   width: 100%;
 }
+
+/* Google Translate Styling */
+.translate-dropdown {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.translate-dropdown .goog-te-gadget {
+  font-family: 'Georgia', serif !important;
+  color: white !important;
+}
+
+.translate-dropdown .goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 9999px !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  transition: all 0.3s ease !important;
+  min-height: auto !important;
+}
+
+.translate-dropdown .goog-te-gadget-simple:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.3) !important;
+}
+
+.translate-dropdown .goog-te-gadget-simple .goog-te-menu-value {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.translate-dropdown .goog-te-gadget-simple .goog-te-menu-value span {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 13px !important;
+}
+
+.translate-dropdown .goog-te-gadget-simple .goog-te-menu-value span:first-child {
+  display: none !important;
+}
+
+.translate-dropdown .goog-te-gadget-icon {
+  display: inline-block !important;
+  margin-right: 4px !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-size: contain !important;
+}
+
+/* Hide Google Translate banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Style for the dropdown menu */
+.goog-te-menu-frame {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 12px !important;
+}
+
+.goog-te-menu2 {
+  background-color: rgba(15, 23, 42, 0.98) !important;
+  border: 1px solid rgba(251, 191, 36, 0.3) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.goog-te-menu2-item div,
+.goog-te-menu2-item:link div,
+.goog-te-menu2-item:visited div,
+.goog-te-menu2-item:active div {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: 'Poppins', sans-serif !important;
+  padding: 8px 16px !important;
+}
+
+.goog-te-menu2-item:hover {
+  background-color: rgba(251, 191, 36, 0.2) !important;
+}
+
+.goog-te-menu2-item-selected {
+  background-color: rgba(251, 191, 36, 0.3) !important;
+}

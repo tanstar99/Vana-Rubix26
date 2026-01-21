@@ -55,6 +55,8 @@ export default function Navbar() {
                 <span className="relative z-10">{link.label}</span>
               </Link>
             ))}
+            {/* Google Translate Dropdown */}
+            <div id="google_translate_element" className="translate-dropdown"></div>
             </div>
 
             {/* Mobile menu button */}
@@ -93,6 +95,8 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden mt-2 border-t-2 border-amber-400/40 bg-slate-900/80 backdrop-blur-xl rounded-b-3xl shadow-lg" style={{ animation: 'fadeInUp 0.3s ease-out' }}>
           <div className="px-4 pt-3 pb-4 space-y-2">
+            {/* Google Translate for Mobile */}
+            <div id="google_translate_element_mobile" className="translate-dropdown mb-3"></div>
             {navLinks.map((link) => (
               <Link
                 key={link.path}
