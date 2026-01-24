@@ -1,4 +1,4 @@
-# 🌿 Virtual Herbal Garden - AYUSH Medicinal Plants
+# 🌿 Vana: A Virtual Herbal Garden for AYUSH Medicinal Plants
 
 A comprehensive, interactive web application for exploring medicinal plants from AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy) traditions through 3D visualization, detailed plant profiles, and guided educational tours.
 
